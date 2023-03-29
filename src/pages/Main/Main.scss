@@ -1,0 +1,32 @@
+.header {
+  padding-top: 60px;
+
+  .container1 {
+    padding-top: 60px;
+    .container1-tittle {
+      left: -50px;
+      font-size: 30px;
+      color: black;
+      display: block;
+      text-align: center;
+      font-weight: bold;
+    }
+    .check-personal-color {
+      color: black;
+      font-weight: bold;
+      display: block;
+      font-size: 20px;
+      text-align: center;
+      padding: 20px;
+      background-color: antiquewhite;
+    }
+  }
+
+  .container2 {
+    padding-top: 40px;
+    .special-price-title {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+}

@@ -54,7 +54,7 @@ const Footer = () => {
         <div className="developer">DEVELOPER</div>
         <div className="profile">
           <div className="profileName">조은혜</div>
-          <div classname="profilePosition">프론트엔드</div>
+          <div className="profilePosition">프론트엔드</div>
           <a
             className="profileGithub"
             href="https://github.com/yellowbutter0327"

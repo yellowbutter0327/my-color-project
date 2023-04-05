@@ -1,0 +1,29 @@
+.register-wrap .check-box .check-box-title {
+  margin: 10px auto;
+  text-align: center;
+  font-weight: 700;
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+.register-wrap .check-box .check-text {
+  font-size: 18px;
+  margin-left: 8px;
+}
+.register-wrap .check-box .check-content {
+  border: 1px solid black;
+  width: 30%;
+  margin: 0 auto;
+  height: 100px;
+  line-height: 20px;
+  font-size: 16px;
+  overflow: scroll;
+}
+
+.next-button {
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 7px;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 165);
+}/*# sourceMappingURL=TermsToggle.css.map */

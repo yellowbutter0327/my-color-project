@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Toggle.scss';
+import './TermsToggle.scss';
 
-function Toggle({ title, content, disabled, checked, onChange }) {
+function TermsToggle({ title, content, disabled, checked, onChange }) {
   return (
     <div className="check-box">
       <div className="check-box-title">
@@ -19,4 +19,4 @@ function Toggle({ title, content, disabled, checked, onChange }) {
   );
 }
 
-export default Toggle;
+export default TermsToggle;

@@ -6,6 +6,7 @@ import Order from './pages/Order/Order';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import ProductList from './pages/ProductList/ProductList';
 import Register from './pages/Register/Register';
+import Terms from './pages/Register/Component/Terms';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
 function Router() {
@@ -20,6 +21,7 @@ function Router() {
         <Route path="/productdetail/:productId" element={<ProductDetail />} />
         <Route path="/productlist/" element={<ProductList />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/register/terms" element={<Terms />} />
       </Routes>
       <Footer />
     </BrowserRouter>

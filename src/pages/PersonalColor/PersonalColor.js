@@ -8,7 +8,7 @@ function PersonalColor() {
     <div className="allWrap">
       <h1 className="searchTitle">나의 퍼스널 키워드 찾기🔍</h1>
       <div className="infoWrap">
-        <h2 className="colorTitle">봄웜톤 특징</h2>
+        <h2 className="colorTitle">봄웜톤 특징 </h2>
         <p className="colorInfo">
           <span className="colorInfoSpan">
             "산뜻반짝"이라는 수식어가 찰떡인 봄 유형!{' '}

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './PersonalColor.scss';
+import Preview from './Component/Preview';
+import image1 from 'assets/PersonalColor/image1.jpg';
 
 function PersonalColor() {
   return (
@@ -180,6 +182,12 @@ function PersonalColor() {
           깔끔한 음영 메이크업이 잘 어울려서 고혹적이고 매력적인 느낌을 줄 수
           있어요.
         </p>
+      </div>
+
+      <div className="colorCheckWrap">
+        <img className="colorCheckImg" src={image1} />
+        <Preview />
+        <img className="colorCheckImg" src={image1} />
       </div>
     </div>
   );

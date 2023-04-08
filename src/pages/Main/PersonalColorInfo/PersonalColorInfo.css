@@ -1,0 +1,23 @@
+.color-info-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.color-info-container .color-info-wrap {
+  width: 30%;
+  text-align: center;
+}
+.color-info-container .color-info-wrap .color-info-img {
+  width: 80%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.color-info-container .color-info-wrap .color-info-title {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #444340;
+}/*# sourceMappingURL=PersonalColorInfo.css.map */

@@ -10,6 +10,7 @@ import Register from './pages/Register/Register';
 import Terms from './pages/Register/Component/Terms';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
+import PageNotFound from 'pages/404/PageNotFound';
 function Router() {
   return (
     <BrowserRouter>
@@ -24,7 +25,7 @@ function Router() {
         <Route path="/personalcolor" element={<PersonalColor />} />
         <Route path="/register" element={<Register />} />
         <Route path="/register/terms" element={<Terms />} />
-        <Route path="*" element={<div>없는 페이지입니다</div>} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>

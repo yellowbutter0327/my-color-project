@@ -31,7 +31,7 @@ const Nav = () => {
       <div className="top-header">
         <div className="left-wrap">
           <div className="logo">
-            <Link to="/main">
+            <Link to="/">
               <img className="main-logo" src="/images/main-logo.jpeg" />
             </Link>
           </div>

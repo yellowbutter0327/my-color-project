@@ -24,6 +24,7 @@ function Router() {
         <Route path="/personalcolor" element={<PersonalColor />} />
         <Route path="/register" element={<Register />} />
         <Route path="/register/terms" element={<Terms />} />
+        <Route path="*" element={<div>없는 페이지입니다</div>} />
       </Routes>
       <Footer />
     </BrowserRouter>

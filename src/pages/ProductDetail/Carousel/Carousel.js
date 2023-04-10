@@ -5,20 +5,16 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import 'font-awesome/css/font-awesome.min.css';
-import image1 from 'assets/Main/Carousel/carousel1.jpg';
-import image2 from 'assets/Main/Carousel/carousel2.jpg';
-import image3 from 'assets/Main/Carousel/carousel3.jpg';
-import image4 from 'assets/Main/Carousel/carousel4.jpg';
 
 const Carousel = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     prevArrow: <PrevArrow className="slick-prev" />,
     nextArrow: <NextArrow className="slick-next" />,
   };
@@ -26,16 +22,10 @@ const Carousel = () => {
   return (
     <Slider {...settings} className="slider">
       <div>
-        <img src={image1} className="slide-image" alt="slide 1" />
+        <img src="images/image1.jpg" className="slide-image" alt="이미지1" />
       </div>
       <div>
-        <img src={image2} className="slide-image" alt="slide 2" />
-      </div>
-      <div>
-        <img src={image3} className="slide-image" alt="slide 3" />
-      </div>
-      <div>
-        <img src={image4} className="slide-image" alt="slide 4" />
+        <img src="images/image1.jpg" className="slide-image" alt="이미지2" />
       </div>
     </Slider>
   );
@@ -58,5 +48,4 @@ const NextArrow = props => {
     </div>
   );
 };
-
 export default Carousel;

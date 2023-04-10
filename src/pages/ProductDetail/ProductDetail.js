@@ -38,7 +38,7 @@ const ProductDetail = () => {
 
             <div className="choose-wrap">
               <div className="choose-container">
-                <h2 onClick={handleTabClick}>상품을 선택해주세요</h2>
+                <h2 onClick={handleTabClick}> 상품을 선택해주세요</h2>
                 {isTabOpen && (
                   <div className="option-wrap">
                     <ul className="option-list">

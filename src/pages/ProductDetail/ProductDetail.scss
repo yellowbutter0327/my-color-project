@@ -1,74 +1,8 @@
 .proudct-detail-wrap {
-  padding: 50px 90px;
+  padding: 80px 90px;
 
   .product-top-wrap {
     display: flex;
     justify-content: center;
-
-    .right-wrap {
-      padding: 25px 0;
-      padding-left: 25px;
-      min-width: 600px;
-      background-color: beige;
-      margin-left: 80px;
-
-      .product-info-wrap {
-        .product-price {
-          font-size: 25px;
-          color: #e01f20;
-        }
-
-        .choose-wrap {
-          .choose-container {
-            margin: 30px 0;
-            width: 90%;
-            background-color: white;
-            border: 1px solid gray;
-            border-radius: 5px;
-            .option-wrap {
-              .option-list {
-                font-size: 20px;
-              }
-            }
-          }
-        }
-
-        .selected-wrap {
-          margin-bottom: 40px;
-          .selected-info {
-            font-size: 20px;
-            padding: 0 15px;
-          }
-          .selected-quantity-wrap {
-            display: flex;
-            align-items: center;
-            .quantity-button {
-              font-size: 40px;
-              background: none;
-            }
-          }
-        }
-
-        .total-price {
-          width: 90%;
-          color: #e01f20;
-          border-bottom: 3px solid salmon;
-          padding-bottom: 10px;
-        }
-
-        .purchase-icon-wrap {
-          display: flex;
-          margin-top: 15px;
-          .purchase-button {
-            padding: 20px;
-            margin-right: 10px;
-            font-size: 20px;
-            border-radius: 5px;
-            border: 1px solid #e01f20;
-            font-weight: bold;
-          }
-        }
-      }
-    }
   }
 }

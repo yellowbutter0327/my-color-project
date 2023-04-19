@@ -1,12 +1,12 @@
 import React from 'react';
-import './Carousel.scss';
+import './LeftSide.scss';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import 'font-awesome/css/font-awesome.min.css';
 
-const Carousel = () => {
+const LeftSide = ({ productData }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -18,14 +18,13 @@ const Carousel = () => {
     prevArrow: <PrevArrow className="slick-prev" />,
     nextArrow: <NextArrow className="slick-next" />,
   };
-
   return (
     <Slider {...settings} className="slider">
       <div>
-        <img src="images/image1.jpg" className="slide-image" alt="이미지1" />
+        <img src={productData.src} className="slide-image" alt="이미지1" />
       </div>
       <div>
-        <img src="images/image1.jpg" className="slide-image" alt="이미지2" />
+        <img src={productData.src2} className="slide-image" alt="이미지2" />
       </div>
     </Slider>
   );
@@ -48,4 +47,4 @@ const NextArrow = props => {
     </div>
   );
 };
-export default Carousel;
+export default LeftSide;

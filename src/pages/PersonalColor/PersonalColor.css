@@ -1,0 +1,21 @@
+.allWrap {
+  background-color: #d6f3fe;
+  padding: 20px;
+}
+.allWrap .infoWrap {
+  padding: 20px 10px;
+  line-height: 30px;
+}
+.allWrap .infoWrap h3 {
+  font-size: 20px;
+}
+.allWrap .infoWrap .colorInfo {
+  padding: 8px;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.allWrap .infoWrap .colorInfo .colorInfoSpan {
+  display: block;
+}/*# sourceMappingURL=PersonalColor.css.map */

@@ -19,6 +19,7 @@ const ProductMenu = () => {
                 className={
                   currentTab === menu.id ? 'turn-on-btn' : 'turn-off-btn'
                 }
+                style={{ color: menu.color }}
               >
                 {menu.title}
               </div>
@@ -52,48 +53,55 @@ export default ProductMenu;
 const MenuData = [
   {
     id: 0,
-    title: '전체상품',
-    description: '담화마켓의 모든 술을 만나보세요!',
+    title: '봄 웜톤',
+    color: 'pink',
+    description: '상큼하고 화사한 봄 웜톤에게 어울리는 색조 화장품',
     background: 'gray',
-    src: '/images/sooldamhwa-logo.png',
+    src: '/images/spring.jpg',
     filterLists: [
-      { id: 0, title: '주종', options: [{ id: 0, option: '탁주' }] },
-      { id: 1, title: '배송', options: [{ id: 0, option: '탁주' }] },
-      { id: 2, title: '가격', options: [{ id: 0, option: '탁주' }] },
+      { id: 0, title: '립', options: [{ id: 0, option: '탁주' }] },
+      { id: 1, title: '아이', options: [{ id: 0, option: '탁주' }] },
+      { id: 2, title: '블러셔', options: [{ id: 0, option: '탁주' }] },
     ],
   },
   {
     id: 1,
-    title: '베이스',
-    description: '이번 주 새로 들어온 술들이에요.',
+    title: '여름 쿨톤',
+    color: 'lightblue',
+    description: '시크하며 세련된 여름 쿨톤에게 어울리는 색조 화장품',
     background: 'rgb(232,242,255)',
-    src: '/images/sooldamhwa-logo.png',
+    src: '/images/summer.jpg',
 
     filterLists: [
-      { id: 0, title: '주종', options: [{ id: 0, option: '탁주' }] },
-      { id: 1, title: '배송', options: [{ id: 0, option: '탁주' }] },
-      { id: 2, title: '가격', options: [{ id: 0, option: '탁주' }] },
+      { id: 0, title: '립', options: [{ id: 0, option: '탁주' }] },
+      { id: 1, title: '아이', options: [{ id: 0, option: '탁주' }] },
+      { id: 2, title: '블러셔', options: [{ id: 0, option: '탁주' }] },
     ],
   },
   {
     id: 2,
-    title: '립',
-    description: '이번 주 가장 인기가 많은 술',
+    title: '가을 웜톤',
+    color: '#b98d7c ',
+    description: '지적이고 차분한 가을 웜톤에게 어울리는 색조 화장품',
     background: 'rgb(255,246,232)',
-    src: '/images/sooldamhwa-logo.png',
+    src: '/images/fall.jpg',
+    filterLists: [
+      { id: 0, title: '립', options: [{ id: 0, option: '탁주' }] },
+      { id: 1, title: '아이', options: [{ id: 0, option: '탁주' }] },
+      { id: 2, title: '블러셔', options: [{ id: 0, option: '탁주' }] },
+    ],
   },
   {
     id: 3,
-    title: '아이',
-    description: '배송비, 이제는 한 번만 내요',
+    title: '겨울 쿨톤',
+    color: 'gray',
+    description: '도시적이고 세련된 겨울 쿨톤에게 어울리는 색조 화장품',
     background: 'rgb(255,246,232)',
-    src: '/images/sooldamhwa-logo.png',
-  },
-  {
-    id: 4,
-    title: '치크/컨투어링',
-    description: '배송비, 이제는 한 번만 내요',
-    background: 'rgb(255,246,232)',
-    src: '/images/sooldamhwa-logo.png',
+    src: '/images/winter.jpg',
+    filterLists: [
+      { id: 0, title: '립', options: [{ id: 0, option: '탁주' }] },
+      { id: 1, title: '아이', options: [{ id: 0, option: '탁주' }] },
+      { id: 2, title: '블러셔', options: [{ id: 0, option: '탁주' }] },
+    ],
   },
 ];

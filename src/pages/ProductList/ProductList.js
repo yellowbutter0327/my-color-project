@@ -32,7 +32,7 @@ function ProductList() {
     });
 
   return (
-    <div className="container">
+    <div className="product-list-container">
       <div className="content-wrapper">
         <div className="product-list-head">
           <div className="product-menu">
@@ -43,8 +43,6 @@ function ProductList() {
             <Dropdown />
           </div>
 
-          {/* 회색줄 */}
-          <div className="grey-line" />
           {/* 검색결과 */}
           <div className="search-container">
             <ProductSearch total={data.length} />

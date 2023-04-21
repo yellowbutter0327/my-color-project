@@ -5,7 +5,6 @@ import { APIS } from '../../config';
 
 const Nav = () => {
   const navigate = useNavigate();
-  const [userId, setUserId] = useState(1);
   const [itemList, setItemList] = useState();
   const [searchInput, setSearchInput] = useState();
   const isLoginCheck = !!localStorage.getItem('TOKEN');
@@ -70,7 +69,16 @@ const Nav = () => {
           </div>
         </div>
       </div>
-      <div className="bottom-header" />
+      <div className="bottom-header">
+        <ul className="nav-category-wrap">
+          <li className="nav-category-list">
+            <Link to="/personalcolor">퍼스널 컬러?</Link>
+          </li>
+          <li className="nav-category-list">
+            <Link to="/productList">쇼핑하기</Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

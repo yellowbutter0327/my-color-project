@@ -21,17 +21,22 @@ const Login = () => {
   const handleLogin = e => {
     e.preventDefault();
 
-    fetch('http://10.58.52.65:3000/users/login', {
+    fetch('', {
       method: 'POST',
       body: JSON.stringify({
-        email: userInfo.userId,
-        password: userInfo.userPassword,
+        id: 'Test1234@naver.com',
+        pw: 'Test1234!',
       }),
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
       },
     })
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(res.statusText);
+        }
+        return res.json();
+      })
       .then(data => {
         console.log(data);
         if (data.accessToken) {
@@ -40,6 +45,10 @@ const Login = () => {
         } else {
           alert('아이디와 비밀번호를 확인해주세요!');
         }
+      })
+      .catch(error => {
+        console.error(error);
+        alert('서버와의 통신에 실패했습니다.');
       });
   };
 
@@ -51,7 +60,12 @@ const Login = () => {
     <div className="login">
       <h4 className="title-login">로그인</h4>
       <div className="login-form-container">
-        <form className="login-form" onSubmit={handleLogin}>
+        <form
+          className="login-form"
+          onSubmit={handleLogin}
+          action="/login"
+          method="POST"
+        >
           <div className="form-wrap">
             <input
               onChange={getUserInfo}
@@ -78,13 +92,13 @@ const Login = () => {
         </form>
 
         <div className="social-button">
-          <button className="loginButton-kakao" type="submit">
+          <button className="login-button-kakao" type="submit">
             <img className="social-icon" src={iconKakao} />
             카카오로 1초만에 시작하기
           </button>
         </div>
 
-        <div className="signupAndFind">
+        <div className="signup-and-find">
           <Link to="/register" className="link">
             회원가입
           </Link>

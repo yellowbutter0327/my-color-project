@@ -77,7 +77,7 @@ function PersonalColor() {
         <h2>여름쿨톤 특징</h2>
         <p className="colorInfo">
           <span className="colorInfoSpan">
-            "부드러운" 시원하고 부드러운 여름!{' '}
+            <strong>시원하고 부드러운</strong> 여름!{' '}
           </span>
           파랑을 바탕으로 뿌연, 흐릿한 느낌을 가지고 있는 색상으로 이루어져
           있습니다. 매트한 피부 표현과 부드러운 색조로 청순하고 깨끗한 이미지를

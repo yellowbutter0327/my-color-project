@@ -35,19 +35,6 @@ function ProductList() {
       console.log('Error:', error);
     });
 
-  // useEffect(() => {
-  //   // 탭별로 데이터 필터링
-  //   if (currentTab === 0) {
-  //     setFilteredData(data.filter(item => item.id === 0));
-  //   } else if (currentTab === 1) {
-  //     setFilteredData(data.filter(item => item.id === 1));
-  //   } else if (currentTab === 2) {
-  //     setFilteredData(data.filter(item => item.id === 2));
-  //   } else if (currentTab === 3) {
-  //     setFilteredData(data.filter(item => item.id === 3));
-  //   }
-  // }, [data, currentTab]);
-
   console.log(currentTab);
 
   return (
@@ -67,7 +54,7 @@ function ProductList() {
 
           {/* 검색결과 */}
           <div className="search-container">
-            <ProductSearch total={data.length} />
+            <ProductSearch total={filterData.length} />
           </div>
           {/* 아이템 */}
           <div className="item-container">

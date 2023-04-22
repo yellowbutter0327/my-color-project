@@ -46,7 +46,9 @@ const ProductDetail = () => {
       <div className="product-under-wrap">
         <UnderTap />
       </div>
+    </div>
   );
 };
 
 export default ProductDetail;
+

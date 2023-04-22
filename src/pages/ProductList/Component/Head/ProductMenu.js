@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import './ProductMenu.scss';
 
-const ProductMenu = () => {
-  const [currentTab, setCurrentTab] = useState(0);
+const ProductMenu = ({ currentTab, setCurrentTab }) => {
   const menuItem = MenuData[currentTab];
+
+  const handleClick = id => {
+    setCurrentTab(id);
+  };
 
   return (
     <div className="menu-wrapper">
@@ -12,7 +15,7 @@ const ProductMenu = () => {
           {MenuData.map(menu => (
             <div
               key={menu.id}
-              onClick={() => setCurrentTab(menu.id)}
+              onClick={() => handleClick(menu.id)}
               className="menu-name"
             >
               <div
@@ -23,11 +26,6 @@ const ProductMenu = () => {
               >
                 {menu.title}
               </div>
-              <div
-                className={
-                  currentTab === menu.id ? 'turn-on-light' : 'turn-off-light'
-                }
-              />
             </div>
           ))}
         </div>

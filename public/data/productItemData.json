@@ -1,6 +1,7 @@
 [
   {
     "id": 0,
+    "listId": 0,
     "title": "맥 립스틱",
     "originPrice": "10000",
     "price": "5000",
@@ -9,6 +10,7 @@
   },
   {
     "id": 1,
+    "listId": 0,
     "title": "에스쁘아 립스틱",
     "originPrice": "14000",
     "price": "9000",
@@ -17,6 +19,7 @@
   },
   {
     "id": 2,
+    "listId": 1,
     "title": "조은혜 틴트",
     "originPrice": "1000000",
     "price": "900900",
@@ -25,6 +28,7 @@
   },
   {
     "id": 3,
+    "listId": 1,
     "title": "조은혜 틴트",
     "originPrice": "1000000",
     "price": "900900",
@@ -33,6 +37,7 @@
   },
   {
     "id": 4,
+    "listId": 2,
     "title": "조은혜 틴트",
     "originPrice": "1000000",
     "price": "900900",
@@ -41,6 +46,7 @@
   },
   {
     "id": 5,
+    "listId": 3,
     "title": "조은혜 틴트",
     "originPrice": "1000000",
     "price": "900900",

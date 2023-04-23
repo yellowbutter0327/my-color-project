@@ -5,7 +5,6 @@
     "title": "핑크 블러셔",
     "originPrice": "10000",
     "price": "5000",
-<<<<<<< HEAD
     "src": "./images/product1.jpg"
   },
   {
@@ -199,55 +198,5 @@
     "originPrice": "10000",
     "price": "9000",
     "src": "./images/product25.jpg"
-=======
-    "src": "/images/eyeProductDetail.jpg",
-    "src2": "/images/eyeProductDetail.jpg",
-    "tag": ["#립스틱", "#봄웜톤"]
-  },
-  {
-    "id": 1,
-    "title": "에스쁘아 립스틱",
-    "originPrice": "14000",
-    "price": "9000",
-    "src": "/images/eyeShadow.jpg",
-    "src2": "/images/eyeShadow.jpg",
-    "tag": ["#에스쁘아", "#봄웜톤"]
-  },
-  {
-    "id": 2,
-    "title": "조은혜 틴트",
-    "originPrice": "89000",
-    "price": "49300",
-    "src": "/images/eyeShadow.jpg",
-    "src2": "/images/eyeShadow.jpg",
-    "tag": ["#조은혜틴트", "#봄웜톤"]
-  },
-  {
-    "id": 3,
-    "title": "조은혜 틴트",
-    "originPrice": "1000000",
-    "price": "900900",
-    "src": "/images/blusher.jpg",
-    "src2": "/images/blusher.jpg",
-    "tag": ["#조은혜틴트", "#봄웜톤"]
-  },
-  {
-    "id": 4,
-    "title": "조은혜 틴트",
-    "originPrice": "1000000",
-    "price": "900900",
-    "src": "/images/eyeShadow.jpg",
-    "src2": "/images/eyeShadow.jpg",
-    "tag": ["#조은혜틴트", "#봄웜톤"]
-  },
-  {
-    "id": 5,
-    "title": "조은혜 틴트",
-    "originPrice": "1000000",
-    "price": "900900",
-    "src": "./images/eyeShadow.jpg",
-    "src2": "./images/eyeShadow.jpg",
-    "tag": ["#조은혜틴트", "#봄웜톤"]
->>>>>>> feature/product-detail
   }
 ]

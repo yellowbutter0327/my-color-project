@@ -12,7 +12,7 @@ const ProductItem = ({ data }) => {
         <div
           className="product-info-box"
           key={item.id}
-          onClick={() => navigate(`/producedetail/${item.id}`)}
+          onClick={() => navigate(`/productdetail/${String(item.id)}`)}
         >
           <div className="product-info">
             <a href="#!" className="product-link">

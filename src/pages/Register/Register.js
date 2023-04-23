@@ -5,7 +5,7 @@ function Register() {
   return (
     <div className="container">
       <div className="contents">
-        <h4 className="signup">회원가입</h4>
+        <h4 className="signup"> 회원가입</h4>
 
         <div className="signup-form">
           <div className="form-wrap">

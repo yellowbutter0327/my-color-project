@@ -75,7 +75,7 @@ const Nav = () => {
             <Link to="/personalcolor">퍼스널 컬러?</Link>
           </li>
           <li className="nav-category-list">
-            <Link to="/productList">쇼핑하기</Link>
+            <Link to="/productlist">쇼핑하기</Link>
           </li>
         </ul>
       </div>

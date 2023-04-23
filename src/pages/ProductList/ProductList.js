@@ -10,30 +10,31 @@ function ProductList() {
   const [data, setData] = useState([]);
   const [filterData, setFilteredData] = useState([]);
 
-  // console.log(currentTab);
-  fetch(`${process.env.PUBLIC_URL}/data/productItemData.json`, {
-    headers: {
-      Accept: 'application/json',
-    },
-    method: 'GET',
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const contentType = response.headers.get('content-type');
-      if (!contentType || !contentType.includes('application/json')) {
-        throw new TypeError('JSON expected');
-      }
-      return response.json();
+  useEffect(() => {
+    fetch(`${process.env.PUBLIC_URL}/data/productItemData.json`, {
+      headers: {
+        Accept: 'application/json',
+      },
+      method: 'GET',
     })
-    .then(data => {
-      setData(data);
-      setFilteredData(data.filter(item => item.listId === currentTab));
-    })
-    .catch(error => {
-      console.log('Error:', error);
-    });
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          throw new TypeError('JSON expected');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setData(data);
+        setFilteredData(data.filter(item => item.listId === currentTab));
+      })
+      .catch(error => {
+        console.log('Error:', error);
+      });
+  }, [currentTab]);
 
   console.log(currentTab);
 

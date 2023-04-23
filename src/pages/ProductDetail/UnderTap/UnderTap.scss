@@ -1,0 +1,27 @@
+.detail-tap-wrap {
+  margin-top: 50px;
+
+  .tap-title-wrap {
+    display: flex;
+    .btn-on {
+      background-color: yellowgreen;
+      border-radius: 5px;
+      font-size: 20px;
+      border: 1px solid black;
+      cursor: pointer;
+      padding: 5px 200px;
+    }
+    .btn-off {
+      border-radius: 5px;
+      font-size: 20px;
+      border: 1px solid black;
+      cursor: pointer;
+      padding: 5px 200px;
+      background-color: light-gray;
+      color: light-gray;
+    }
+  }
+}
+
+.tap-content-wrap {
+}

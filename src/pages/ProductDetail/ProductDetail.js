@@ -35,8 +35,6 @@ const ProductDetail = () => {
       });
   }, []);
 
-  // console.log('얘는뭐야', productData);
-
   return (
     <div className="proudct-detail-wrap">
       <div className="product-top-wrap">

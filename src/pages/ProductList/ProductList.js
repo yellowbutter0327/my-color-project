@@ -6,52 +6,60 @@ import Dropdown from './Component/Head/Dropdown';
 import ProductMenu from './Component/Head/ProductMenu';
 
 function ProductList() {
+  const [currentTab, setCurrentTab] = useState(0);
   const [data, setData] = useState([]);
+  const [filterData, setFilteredData] = useState([]);
 
-  fetch(`${process.env.PUBLIC_URL}/data/productItemData.json`, {
-    headers: {
-      Accept: 'application/json',
-    },
-    method: 'GET',
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const contentType = response.headers.get('content-type');
-      if (!contentType || !contentType.includes('application/json')) {
-        throw new TypeError('JSON expected');
-      }
-      return response.json();
+  useEffect(() => {
+    fetch(`${process.env.PUBLIC_URL}/data/productItemData.json`, {
+      headers: {
+        Accept: 'application/json',
+      },
+      method: 'GET',
     })
-    .then(data => {
-      setData(data);
-    })
-    .catch(error => {
-      console.log('Error:', error);
-    });
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          throw new TypeError('JSON expected');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setData(data);
+        setFilteredData(data.filter(item => item.listId === currentTab));
+      })
+      .catch(error => {
+        console.log('Error:', error);
+      });
+  }, [currentTab]);
+
+  console.log(currentTab);
 
   return (
-    <div className="container">
+    <div className="product-list-container">
       <div className="content-wrapper">
         <div className="product-list-head">
           <div className="product-menu">
-            <ProductMenu />
+            <ProductMenu
+              currentTab={currentTab}
+              setCurrentTab={setCurrentTab}
+            />
           </div>
           {/* 필터 */}
           <div className="product-filter-box">
             <Dropdown />
           </div>
 
-          {/* 회색줄 */}
-          <div className="grey-line" />
           {/* 검색결과 */}
           <div className="search-container">
-            <ProductSearch total={data.length} />
+            <ProductSearch total={filterData.length} />
           </div>
           {/* 아이템 */}
           <div className="item-container">
-            <ProductItem data={data} />
+            <ProductItem data={filterData} />
           </div>
         </div>
       </div>

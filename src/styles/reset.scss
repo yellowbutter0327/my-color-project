@@ -145,9 +145,9 @@ select {
 }
 
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -167,19 +167,19 @@ input {
   line-height: normal;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -259,7 +259,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -306,8 +306,8 @@ a {
 }
 
 body {
-  font-family: "Malgun Gothic", "Helvetica", "Apple-Gothic", "애플고딕",
-    "Tahoma", dotum, "돋움", gulim, "굴림", sans-serif;
+  font-family: 'Malgun Gothic', 'Helvetica', 'Apple-Gothic', '애플고딕',
+    'Tahoma', dotum, '돋움', gulim, '굴림', sans-serif;
   color: #111;
   font-weight: normal;
   font-size: 14px;
@@ -316,8 +316,8 @@ body {
 }
 pre {
   line-height: 12px;
-  font-family: "Droid Sans", "Malgun Gothic", "Helvetica", "Apple-Gothic",
-    "애플고딕", "Tahoma", dotum, "돋움", gulim, "굴림", sans-serif;
+  font-family: 'Droid Sans', 'Malgun Gothic', 'Helvetica', 'Apple-Gothic',
+    '애플고딕', 'Tahoma', dotum, '돋움', gulim, '굴림', sans-serif;
   color: #111;
   white-space: pre-line;
 }

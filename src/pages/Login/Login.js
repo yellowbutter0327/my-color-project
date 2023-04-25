@@ -99,7 +99,7 @@ const Login = () => {
         </div>
 
         <div className="signup-and-find">
-          <Link to="/register" className="link">
+          <Link to="/register/terms" className="link">
             회원가입
           </Link>
           <Link to="/login" className="link">

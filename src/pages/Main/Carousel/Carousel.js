@@ -24,7 +24,7 @@ const Carousel = () => {
   };
 
   return (
-    <Slider {...settings} className="slider">
+    <Slider {...settings} className="main-slider">
       <div>
         <img src={image1} className="slide-image" alt="slide 1" />
       </div>

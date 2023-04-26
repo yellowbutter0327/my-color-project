@@ -1,7 +1,8 @@
 .all-container {
   background-color: beige;
   padding-bottom: 100px;
-  padding-top: 50px;
+  padding-top: 150px;
+  text-align: center;
   .register-wrap {
     .all-check-wrap {
       padding-top: 70px;
@@ -16,5 +17,8 @@
         font-weight: bolder;
       }
     }
+  }
+  .next-button {
+    margin-top: 30px;
   }
 }

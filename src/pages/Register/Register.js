@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Register.scss';
+import { auth } from '../../firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 function Register() {
   const [nickname, setNickName] = useState('');
@@ -13,6 +15,9 @@ function Register() {
   const [pwSameValid, setPwSameValid] = useState(false);
   const [allow, setAllow] = useState(false);
   const navigate = useNavigate();
+  const [error, setError] = useState('');
+
+  const [errorMsg, setErrorMsg] = useState('　');
 
   useEffect(() => {
     if (nickValid && emailValid && pwValid && pwSameValid) {
@@ -30,7 +35,6 @@ function Register() {
       setNickValid(false);
     }
   };
-
   const handleEmail = e => {
     setEmail(e.target.value);
     const regex =
@@ -62,20 +66,41 @@ function Register() {
     }
   };
 
+  // const handleSubmit = e => {
+  //   e.preventDefault();
+  //   if (!allow) {
+  //     alert('회원가입에 실패하였습니다.');
+  //     return;
+  //   } else {
+  // alert(`${nickname}님 회원가입이 완료되었습니다.`);
+  //     navigate('/login');
+  //   }
+  // };
+
   const handleSubmit = e => {
     e.preventDefault();
     if (!allow) {
       alert('회원가입에 실패하였습니다.');
       return;
+    } else if (allow) {
+      createUserWithEmailAndPassword(auth, email, pw)
+        .then(userCredential => {
+          console.log(userCredential);
+          alert('회원가입이 완료되었습니다.');
+          navigate('/login');
+        })
+        .catch(error => {
+          console.log(error);
+        });
     } else {
-      alert(`${nickname}님 회원가입이 완료되었습니다.`);
-      navigate('/login');
+      alert('이메일과 비밀번호를 입력해주세요.');
     }
   };
+
   return (
     <div className="register-container">
       <h1 className="title">회원가입</h1>
-      <form className="register-form" method="POST">
+      <form className="register-form" onSubmit={handleSubmit}>
         <div className="register-input-wrap">
           <div className="register-title"> 닉네임 </div>
           <input
@@ -146,7 +171,7 @@ function Register() {
           </div>
         </div>
       </form>
-      <button className="register-button" onClick={handleSubmit}>
+      <button className="register-button" type="button" onClick={handleSubmit}>
         가입하기
       </button>
     </div>

@@ -1,29 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './Nav.scss';
 import { Link, useNavigate } from 'react-router-dom';
-import { APIS } from '../../config';
 
 const Nav = () => {
   const navigate = useNavigate();
   const [itemList, setItemList] = useState();
   const [searchInput, setSearchInput] = useState();
   const isLoginCheck = !!localStorage.getItem('TOKEN');
-
-  // useEffect(() => {
-  //   fetch(`${APIS.ipAddress}/users/1`, {
-  //     headers: { authorization: localStorage.getItem('TOKEN') },
-  //   })
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       // console.log(data.myData.writerId);
-  //       setUserId(data.myData.writerId);
-  //     });
-  //   fetch(`${APIS.ipAddress}/products`)
-  //     .then(res => res.json())
-  //     .then(result => {
-  //       setItemList(result);
-  //     });
-  // }, []);
 
   return (
     <div className="nav-header">

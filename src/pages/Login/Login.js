@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import iconKakao from 'assets/Login/icon_kakao.png';
 import './Login.scss';
+import { auth } from '../../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 const PW_REG_EXP =
   /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,}$/;
@@ -18,54 +20,32 @@ const Login = () => {
     setUserInfo({ ...userInfo, [name]: value });
   };
 
-  const handleLogin = e => {
-    e.preventDefault();
-
-    fetch('', {
-      method: 'POST',
-      body: JSON.stringify({
-        id: 'Test1234@naver.com',
-        pw: 'Test1234!',
-      }),
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-      },
-    })
-      .then(res => {
-        if (!res.ok) {
-          throw new Error(res.statusText);
-        }
-        return res.json();
-      })
-      .then(data => {
-        console.log(data);
-        if (data.accessToken) {
-          localStorage.setItem('token', data.accessToken);
-          window.location.replace('/');
-        } else {
-          alert('아이디와 비밀번호를 확인해주세요!');
-        }
-      })
-      .catch(error => {
-        console.error(error);
-        alert('서버와의 통신에 실패했습니다.');
-      });
-  };
-
   const { userId, userPassword } = userInfo;
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const isInputValid = userId.includes('@') && PW_REG_EXP.test(userPassword);
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, userId, userPassword)
+      .then(userCredential => {
+        sessionStorage.setItem('userId', userId);
+        sessionStorage.setItem('userPassword', userPassword);
+        setIsLoggedIn(true);
+        alert('안녕하세요 :)');
+        navigate('/');
+        window.location.reload();
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="login">
       <h4 className="title-login">로그인</h4>
       <div className="login-form-container">
-        <form
-          className="login-form"
-          onSubmit={handleLogin}
-          action="/login"
-          method="POST"
-        >
+        <form className="login-form" onSubmit={handleSubmit} method="POST">
           <div className="form-wrap">
             <input
               onChange={getUserInfo}
@@ -86,7 +66,12 @@ const Login = () => {
             />
           </div>
 
-          <button className="login-button" disabled={!isInputValid}>
+          <button
+            className="login-button"
+            disabled={!isInputValid}
+            type="button"
+            onClick={handleSubmit}
+          >
             로그인
           </button>
         </form>

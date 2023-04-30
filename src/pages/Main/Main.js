@@ -4,6 +4,8 @@ import './Main.scss';
 import Carousel from './Carousel/Carousel';
 import { useNavigate } from 'react-router-dom';
 import PersonalColorInfo from './PersonalColorInfo/PersonalColorInfo';
+import { db } from '../../firebase';
+import firebase from '../../firebase.js';
 
 const Main = () => {
   const [data, setData] = useState([]);
@@ -34,7 +36,7 @@ const Main = () => {
       });
   }, []);
 
-  console.log(data);
+  // console.log(data);
 
   const getRandomData = () => {
     const randomData = [];
@@ -46,9 +48,6 @@ const Main = () => {
     }
     return randomData;
   };
-
-  console.log(getRandomData());
-
   return (
     <div className="header">
       <Carousel />

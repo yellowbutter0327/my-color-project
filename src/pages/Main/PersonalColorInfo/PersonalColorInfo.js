@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './PersonalColorInfo.scss';
 import spring from 'assets/Main/spring.jpg';
 import summer from 'assets/Main/summer.jpg';
@@ -10,10 +11,14 @@ const PersonalColorInfo = () => {
     <div className="color-info-container">
       {COLORINFO.map(colorInfo => {
         return (
-          <a className="color-info-wrap" key={colorInfo.id} href="#">
+          <Link
+            to="/personalColor"
+            className="color-info-wrap"
+            key={colorInfo.id}
+          >
             <img className="color-info-img" src={colorInfo.src} />
             <span className="color-info-title"> {colorInfo.text}</span>
-          </a>
+          </Link>
         );
       })}
     </div>

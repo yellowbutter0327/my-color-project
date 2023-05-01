@@ -9,22 +9,6 @@ const Nav = () => {
   const [searchInput, setSearchInput] = useState();
   const isLoginCheck = !!localStorage.getItem('TOKEN');
 
-  // useEffect(() => {
-  //   fetch(`${APIS.ipAddress}/users/1`, {
-  //     headers: { authorization: localStorage.getItem('TOKEN') },
-  //   })
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       // console.log(data.myData.writerId);
-  //       setUserId(data.myData.writerId);
-  //     });
-  //   fetch(`${APIS.ipAddress}/products`)
-  //     .then(res => res.json())
-  //     .then(result => {
-  //       setItemList(result);
-  //     });
-  // }, []);
-
   return (
     <div className="nav-header">
       <div className="top-header">

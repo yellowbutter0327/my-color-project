@@ -4,11 +4,13 @@ import LeftSide from './LeftSide/LeftSide';
 import RightSide from './RightSide/RightSide';
 import './ProductDetail.scss';
 import UnderTap from './UnderTap/UnderTap';
-import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { addItemToCart } from '../../store/cartReducer.js';
 
 const ProductDetail = () => {
   const { id } = useParams();
   const [productData, setProductData] = useState({});
+  const dispatch = useDispatch();
 
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/data/productItemData.json`, {
@@ -35,11 +37,18 @@ const ProductDetail = () => {
       });
   }, []);
 
+  const handleAddToCart = () => {
+    dispatch(addItemToCart(productData));
+  };
+
   return (
     <div className="proudct-detail-wrap">
       <div className="product-top-wrap">
         <LeftSide productData={productData} />
-        <RightSide productData={productData} />
+        <RightSide
+          productData={productData}
+          handleAddToCart={handleAddToCart}
+        />
       </div>
       <div className="product-under-wrap">
         <UnderTap />

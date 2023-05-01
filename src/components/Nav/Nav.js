@@ -1,29 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import './Nav.scss';
 import { Link, useNavigate } from 'react-router-dom';
-import { APIS } from '../../config';
 
 const Nav = () => {
   const navigate = useNavigate();
   const [itemList, setItemList] = useState();
   const [searchInput, setSearchInput] = useState();
-  const isLoginCheck = !!localStorage.getItem('TOKEN');
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    !!sessionStorage.getItem('userId')
+  );
+  const handleLogout = () => {
+    sessionStorage.removeItem('userId');
+    setIsLoggedIn(false);
+    navigate('/');
+  };
 
-  // useEffect(() => {
-  //   fetch(`${APIS.ipAddress}/users/1`, {
-  //     headers: { authorization: localStorage.getItem('TOKEN') },
-  //   })
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       // console.log(data.myData.writerId);
-  //       setUserId(data.myData.writerId);
-  //     });
-  //   fetch(`${APIS.ipAddress}/products`)
-  //     .then(res => res.json())
-  //     .then(result => {
-  //       setItemList(result);
-  //     });
-  // }, []);
+  useEffect(() => {
+    setIsLoggedIn(!!sessionStorage.getItem('userId'));
+  }, [isLoggedIn]);
 
   return (
     <div className="nav-header">
@@ -52,19 +46,34 @@ const Nav = () => {
         <div className="right-wrap">
           <div className="logo-wrap">
             <div className="cart-wrap">
-              <Link to="/cart" className="cart-link">
-                <img
-                  src="/images/cart-icon.png"
-                  alt="장바구니 아이콘"
-                  className="cart-icon"
-                />
-              </Link>
+              {isLoggedIn ? (
+                <Link to="/cart" className="cart-link">
+                  <img
+                    src="/images/cart-icon.png"
+                    alt="장바구니 아이콘"
+                    className="cart-icon"
+                  />
+                </Link>
+              ) : (
+                <button
+                  onClick={() => alert('로그인이 필요한 서비스입니다.')}
+                  className="cart-link"
+                >
+                  <img
+                    src="/images/cart-icon.png"
+                    alt="장바구니 아이콘"
+                    className="cart-icon"
+                  />
+                </button>
+              )}
             </div>
 
             <div className="login-wrap">
-              <Link to="/login" className="login-link">
-                <span className="login-span">로그인/회원가입</span>
-              </Link>
+              {isLoggedIn ? (
+                <button onClick={handleLogout}>로그아웃</button>
+              ) : (
+                <Link to="/login">로그인 / 회원가입</Link>
+              )}
             </div>
           </div>
         </div>

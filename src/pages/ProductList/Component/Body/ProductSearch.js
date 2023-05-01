@@ -1,7 +1,11 @@
 import React from 'react';
 import './ProductSearch.scss';
 
-const ProductSearch = ({ total }) => {
+const ProductSearch = ({ total, handleSortChange }) => {
+  const handleOnChange = e => {
+    handleSortChange(e.target.value);
+  };
+
   return (
     <div className="search-box">
       <div className="product-stats-box">
@@ -11,9 +15,8 @@ const ProductSearch = ({ total }) => {
         </div>
         <div className="filter-wrapper">
           <div className="filter-selector-box">
-            <select className="filter-selector">
+            <select className="filter-selector" onChange={handleOnChange}>
               <option value="recent_product">최근 등록순</option>
-              <option value="sell_popular">판매 인기순</option>
               <option value="price_high">높은 가격순</option>
               <option value="price_low">낮은 가격순</option>
             </select>

@@ -30,8 +30,15 @@ const Nav = () => {
   };
 
   //검색 기능
+  // 검색 기능
   const [itemList, setItemList] = useState();
-  const [searchInput, setSearchInput] = useState();
+  const [searchInput, setSearchInput] = useState('');
+
+  const handleSearch = () => {
+    const query = new URLSearchParams({ search: searchInput }).toString();
+    navigate(`/search?${query}`);
+  };
+
   return (
     <div className="nav-header">
       <div className="top-header">
@@ -53,6 +60,7 @@ const Nav = () => {
               src="/images/search-icon.png"
               alt="검색 아이콘"
               className="search-icon"
+              onClick={handleSearch}
             />
           </div>
         </div>

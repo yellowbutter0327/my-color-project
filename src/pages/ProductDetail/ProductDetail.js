@@ -5,7 +5,7 @@ import RightSide from './RightSide/RightSide';
 import './ProductDetail.scss';
 import UnderTap from './UnderTap/UnderTap';
 import { useDispatch } from 'react-redux';
-import { addItemToCart } from '../../store/cartReducer.js';
+import { addItemToCart } from '../../store/Feature/cartReducer.js';
 
 const ProductDetail = () => {
   const { id } = useParams();

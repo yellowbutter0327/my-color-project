@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { addItemToCart } from '../../../store/cartReducer';
+import { addItemToCart } from '../../../store/Feature/cartReducer';
 import './RightSide.scss';
 
 const RightSide = ({ productData, match }) => {

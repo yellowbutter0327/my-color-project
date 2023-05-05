@@ -1,23 +1,43 @@
 import React, { useEffect, useState } from 'react';
 import './Nav.scss';
 import { Link, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { login, logout, selectIsLoggedIn } from '../../store/Feature/userSlice';
+import { auth, onAuthStateChanged } from '../../firebase';
 
 const Nav = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [itemList, setItemList] = useState();
-  const [searchInput, setSearchInput] = useState();
-  const [isLoggedIn, setIsLoggedIn] = useState(
-    !!sessionStorage.getItem('userId')
-  );
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, userAuth => {
+      if (userAuth) {
+        dispatch(
+          login({
+            userId: userAuth.uid,
+          })
+        );
+      } else {
+        dispatch(logout());
+      }
+    });
+  }, []);
+
   const handleLogout = () => {
-    sessionStorage.removeItem('userId');
-    setIsLoggedIn(false);
+    dispatch(logout());
     navigate('/');
   };
 
-  useEffect(() => {
-    setIsLoggedIn(!!sessionStorage.getItem('userId'));
-  }, [isLoggedIn]);
+  // 검색 기능
+  const [itemList, setItemList] = useState();
+  const [searchInput, setSearchInput] = useState('');
+
+  const handleSearch = () => {
+    const query = new URLSearchParams({ q: searchInput }).toString();
+    navigate(`/search?${query}`);
+    console.log(query);
+  };
 
   return (
     <div className="nav-header">
@@ -40,6 +60,7 @@ const Nav = () => {
               src="/images/search-icon.png"
               alt="검색 아이콘"
               className="search-icon"
+              onClick={handleSearch}
             />
           </div>
         </div>

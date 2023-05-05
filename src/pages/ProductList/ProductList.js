@@ -9,6 +9,7 @@ function ProductList() {
   const [currentTab, setCurrentTab] = useState(0);
   const [data, setData] = useState([]);
   const [filterData, setFilteredData] = useState([]);
+  const [sortBy, setSortBy] = useState('recent_product');
 
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/data/productItemData.json`, {
@@ -28,15 +29,38 @@ function ProductList() {
         return response.json();
       })
       .then(data => {
-        setData(data);
-        setFilteredData(data.filter(item => item.listId === currentTab));
+        let sortedData = [...data];
+        sortedData.sort(
+          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+        );
+        setData(sortedData);
+        setFilteredData(sortedData.filter(item => item.listId === currentTab));
       })
       .catch(error => {
         console.log('Error:', error);
       });
   }, [currentTab]);
 
-  console.log(currentTab);
+  const handleSortChange = sortType => {
+    let sortedData = [...filterData];
+    switch (sortType) {
+      case 'recent_product':
+        sortedData.sort(
+          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+        );
+        break;
+      case 'price_high':
+        sortedData.sort((a, b) => b.price - a.price);
+        break;
+      case 'price_low':
+        sortedData.sort((a, b) => a.price - b.price);
+        break;
+      default:
+        break;
+    }
+    setSortBy(sortType);
+    setFilteredData(sortedData);
+  };
 
   return (
     <div className="product-list-container">
@@ -48,14 +72,12 @@ function ProductList() {
               setCurrentTab={setCurrentTab}
             />
           </div>
-          {/* 필터 */}
-          <div className="product-filter-box">
-            <Dropdown />
-          </div>
-
           {/* 검색결과 */}
           <div className="search-container">
-            <ProductSearch total={filterData.length} />
+            <ProductSearch
+              total={filterData.length}
+              handleSortChange={handleSortChange}
+            />
           </div>
           {/* 아이템 */}
           <div className="item-container">

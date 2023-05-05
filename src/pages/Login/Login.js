@@ -4,37 +4,37 @@ import iconKakao from 'assets/Login/icon_kakao.png';
 import './Login.scss';
 import { auth } from '../../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useDispatch } from 'react-redux';
+import { login } from '../../store/Feature/userSlice';
 
 const PW_REG_EXP =
   /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,}$/;
 
 const Login = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const [userInfo, setUserInfo] = useState({
     userId: '',
     userPassword: '',
   });
+  const { userId, userPassword } = userInfo;
 
   const getUserInfo = e => {
     const { name, value } = e.target;
     setUserInfo({ ...userInfo, [name]: value });
   };
 
-  const { userId, userPassword } = userInfo;
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  //유효성검사
   const isInputValid = userId.includes('@') && PW_REG_EXP.test(userPassword);
 
   const handleSubmit = e => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, userId, userPassword)
-      .then(userCredential => {
-        sessionStorage.setItem('userId', userId);
-        sessionStorage.setItem('userPassword', userPassword);
-        // setIsLoggedIn(true);
+      .then(userAuth => {
+        dispatch(login({ userId: userAuth.user.uid }));
         alert('안녕하세요 :)');
         navigate('/');
-        window.location.reload();
       })
       .catch(error => {
         console.log(error);

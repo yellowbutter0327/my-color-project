@@ -13,7 +13,7 @@ import Register from './pages/Register/Register';
 import Terms from './pages/Register/Component/Terms';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
-import store from './store/store.js';
+import store from './store/index.js';
 import PageNotFound from 'pages/404/PageNotFound';
 
 function Router() {

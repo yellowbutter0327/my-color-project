@@ -15,75 +15,65 @@
   .product-info {
     padding: 16px 0 0 16px;
 
-    .product-link {
-      .image-wrapper {
-        width: 90%;
-        height: 250px;
-        position: relative;
-        border-radius: 10px;
+    .image-wrapper {
+      width: 90%;
+      height: 250px;
+      position: relative;
+      border-radius: 10px;
 
-        .product-img {
-          border-radius: 15px;
-          box-sizing: border-box;
-          border: none;
-          display: block;
-          object-fit: cover;
-          height: 100%;
-          width: 100%;
-        }
+      .product-img {
+        border-radius: 15px;
+        box-sizing: border-box;
+        border: none;
+        display: block;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
       }
+    }
 
-      // 제품 설명
-      .product-content-box {
-        padding-top: 15px;
-        display: flex;
-        flex-direction: column;
+    // 제품 설명
+    .product-content-box {
+      padding-top: 15px;
+      display: flex;
+      flex-direction: column;
 
-        .product-wrapper {
-          .product-name {
+      .product-wrapper {
+        .product-name {
+          height: 15px;
+          font-size: 15px;
+          color: rgb(62, 62, 62);
+          font-weight: bold;
+          text-align: left;
+          line-height: normal;
+        }
+        .product-price-wrapper {
+          margin-top: 8px;
+          display: flex;
+          color: rgb(62, 62, 62);
+          font-size: 16px;
+          text-align: left;
+          font-weight: bold;
+          line-height: 15px;
+
+          .origin-price {
             height: 15px;
-            font-size: 15px;
-            color: rgb(62, 62, 62);
-            font-weight: bold;
-            text-align: left;
-            line-height: normal;
+            margin-bottom: 5px;
+            margin-right: 7px;
+            color: rgb(178, 178, 178);
+            text-decoration: line-through;
+            font-weight: normal;
+            font-size: 14px;
           }
-          .product-price-wrapper {
-            margin-top: 8px;
+          .discount-price-wrapper {
             display: flex;
-            color: rgb(62, 62, 62);
-            font-size: 16px;
-            text-align: left;
-            font-weight: bold;
-            line-height: 15px;
+            align-items: flex-end;
 
-            .origin-price {
-              height: 15px;
-              margin-bottom: 5px;
-              margin-right: 7px;
-              color: rgb(178, 178, 178);
-              text-decoration: line-through;
-              font-weight: normal;
-              font-size: 14px;
-            }
-            .discount-price-wrapper {
-              display: flex;
-              align-items: flex-end;
-
-              .discount-price {
-                margin-right: 8px;
-              }
+            .discount-price {
+              margin-right: 8px;
             }
           }
         }
-      }
-      // 제품 태그
-      .product-footer {
-        border-top-width: 0.5px;
-        border-style: solid;
-        border-color: rgb(235, 235, 235);
-        padding-top: 8px;
-        font-weight: bold;
       }
     }
   }

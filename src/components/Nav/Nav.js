@@ -15,7 +15,7 @@ const Nav = () => {
       if (userAuth) {
         dispatch(
           login({
-            userId: userAuth.userId,
+            userId: userAuth.uid,
           })
         );
       } else {
@@ -29,14 +29,14 @@ const Nav = () => {
     navigate('/');
   };
 
-  //검색 기능
   // 검색 기능
   const [itemList, setItemList] = useState();
   const [searchInput, setSearchInput] = useState('');
 
   const handleSearch = () => {
-    const query = new URLSearchParams({ search: searchInput }).toString();
+    const query = new URLSearchParams({ q: searchInput }).toString();
     navigate(`/search?${query}`);
+    console.log(query);
   };
 
   return (

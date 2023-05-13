@@ -6,9 +6,13 @@ const CartList = ({ cart }) => {
   const [quantity, setQuantity] = useState(cart.map(item => item.quantity));
 
   const handleQuantityIncrease = index => {
-    const newQuantity = [...quantity];
-    newQuantity[index]++;
-    setQuantity(newQuantity);
+    if (quantity[index] < 10) {
+      const newQuantity = [...quantity];
+      newQuantity[index]++;
+      setQuantity(newQuantity);
+    } else {
+      alert('최대 구매 개수는 10개입니다.');
+    }
   };
 
   const handleQuantityDecrease = index => {
@@ -19,7 +23,10 @@ const CartList = ({ cart }) => {
     }
   };
 
-  const totalPrice = cart.reduce((acc, item) => acc + parseInt(item.price), 0);
+  const totalPrice = cart.reduce(
+    (acc, item, index) => acc + item.price * quantity[index],
+    0
+  );
 
   return (
     <>

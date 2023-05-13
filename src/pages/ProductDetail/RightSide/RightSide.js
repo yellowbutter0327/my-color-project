@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addItemToCart } from '../../../store/Feature/cartReducer';
 import './RightSide.scss';
 
 const RightSide = ({ productData, match }) => {
   const [quantity, setQuantity] = useState(0);
   const dispatch = useDispatch();
+  const isLoggedIn = useSelector(state => state.user.isLoggedIn);
+  const uid = useSelector(state => state.user.userId);
 
   const handleQuantityIncrease = () => {
     setQuantity(quantity + 1);
@@ -19,7 +21,7 @@ const RightSide = ({ productData, match }) => {
   };
 
   const handleAddToCart = () => {
-    const cartItem = { ...productData, quantity }; // 장바구니에 추가할 상품 데이터
+    const cartItem = { ...productData, quantity, userId: uid }; // 장바구니에 추가할 상품 데이터에 userId 추가
     dispatch(addItemToCart(cartItem)); // addToCart action dispatch
   };
 

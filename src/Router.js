@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import Main from './pages/Main/Main';
 import Login from './pages/Login/Login';
 import SearchItem from 'pages/SearchItem/SearchItem';
-import Order from './pages/Order/Order';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import ProductList from './pages/ProductList/ProductList';
 import PersonalColor from './pages/PersonalColor/PersonalColor';
@@ -26,7 +25,6 @@ function Router() {
           {/* <Route path="/cart" element={<Cart />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/search" element={<SearchItem />} />
-          <Route path="/order" element={<Order />} />
           <Route path="/productdetail/:id" element={<ProductDetail />} />
           <Route path="/productlist" element={<ProductList />} />
           <Route path="/personalcolor" element={<PersonalColor />} />

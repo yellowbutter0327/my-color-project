@@ -5,6 +5,7 @@ import firebase from './firebase.js';
 import { db } from './firebase.js';
 import './styles/reset.scss';
 import './styles/common.scss';
+import './styles/layout.scss';
 
 // console.log(firebase);
 const root = ReactDOM.createRoot(document.getElementById('root'));

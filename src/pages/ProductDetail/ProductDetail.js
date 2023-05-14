@@ -42,7 +42,7 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="proudct-detail-wrap">
+    <div className="container">
       <div className="product-top-wrap">
         <LeftSide productData={productData} />
         <RightSide

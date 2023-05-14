@@ -49,7 +49,7 @@ const Main = () => {
     return randomData;
   };
   return (
-    <div className="header">
+    <div className="container">
       <Carousel />
       <div className="container1">
         <div className="container1-wrap">

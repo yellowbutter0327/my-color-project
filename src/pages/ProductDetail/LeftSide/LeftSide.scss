@@ -1,6 +1,8 @@
 .slider {
   width: 500px;
   .slide-image {
-    width: 100%;
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
   }
 }

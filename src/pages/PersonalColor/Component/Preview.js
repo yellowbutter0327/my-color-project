@@ -17,7 +17,10 @@ function Preview() {
 
   return (
     <div className="preview-container">
-      <label htmlFor="type-file" className="file-wrap">
+      <label
+        htmlFor="type-file"
+        className={`file-wrap ${!image ? '' : 'no-image'}`}
+      >
         <input
           className="file-image"
           type="file"
@@ -25,10 +28,11 @@ function Preview() {
           accept="image/*"
           onChange={ImageChangeEvent}
         />
-        <div className={`file-image-handler ${!image ? '' : 'no-image'}`} />
+        <div className="file-image-handler" />
       </label>
       {!image && <p className="preview-message">사진을 넣어주세요</p>}
       {image && <img src={image} alt="Selected file" className="uploadImg" />}
+      <div class="bg" />
     </div>
   );
 }

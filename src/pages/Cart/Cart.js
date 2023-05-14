@@ -10,7 +10,7 @@ const Cart = () => {
   const cart = useSelector(state => state.cart);
 
   return (
-    <div className="cart-all-wrap">
+    <div className="container">
       {cart.length === 0 ? (
         <EmptyCart />
       ) : (

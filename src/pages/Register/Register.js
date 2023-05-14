@@ -98,8 +98,8 @@ function Register() {
   };
 
   return (
-    <div className="register-container">
-      <h1 className="title">회원가입</h1>
+    <div className="container">
+      <h1 className="register-main-title">회원가입</h1>
       <form className="register-form" onSubmit={handleSubmit}>
         <div className="register-input-wrap">
           <div className="register-title"> 닉네임 </div>

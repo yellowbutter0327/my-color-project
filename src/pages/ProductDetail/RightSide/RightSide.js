@@ -57,7 +57,9 @@ const RightSide = ({ productData, match }) => {
             </button>
           </Link>
           <Link to="/cart">
-            <button className="purchase-button">구매하기</button>
+            <button className="purchase-button" onClick={handleAddToCart}>
+              구매하기
+            </button>
           </Link>
         </div>
       </div>

@@ -1,46 +1,41 @@
-.register-container {
-  padding: 150px 0;
+.register-main-title {
+  font-size: 30px;
   text-align: center;
+  margin-bottom: 30px;
+}
 
-  .title {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 30px;
-  }
+.register-form {
+  padding-top: 50px;
+  background-color: beige;
+  text-align: center;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
 
-  .register-form {
-    padding-top: 50px;
-    background-color: beige;
-    text-align: center;
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
+  .register-input-wrap {
+    margin-bottom: 20px;
 
-    .register-input-wrap {
-      margin-bottom: 20px;
-
-      input::placeholder {
-        color: black;
-      }
-      .register-title {
-        font-weight: bold;
-        font-size: 20px;
-        margin-bottom: 10px;
-      }
-      .register-input {
-        padding: 10px;
-        width: 300px;
-        font-size: 20px;
-      }
+    input::placeholder {
+      color: black;
+    }
+    .register-title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .register-input {
+      padding: 10px;
+      width: 300px;
+      font-size: 20px;
     }
   }
+}
 
-  .register-button {
-    margin-top: 50px;
-    font-size: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 8px;
-    background-color: skyblue;
-  }
+.register-button {
+  margin-top: 50px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: skyblue;
 }

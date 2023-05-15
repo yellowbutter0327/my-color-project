@@ -63,7 +63,7 @@ function ProductList() {
   };
 
   return (
-    <div className="product-list-container">
+    <div className="container">
       <div className="content-wrapper">
         <div className="product-list-head">
           <div className="product-menu">

@@ -1,35 +1,59 @@
-.allWrap {
-  background-color: #d6f3fe;
-  padding: 20px;
-  padding-top: 150px;
-
-  .infoWrap {
+.color-wrap {
+  background: #d6f3fe;
+  .info-wrap {
     padding: 20px 10px;
     line-height: 30px;
     h3 {
       font-size: 20px;
     }
-    .colorInfo {
+    .color-info {
       padding: 8px;
       background-color: white;
       border-radius: 10px;
       font-size: 18px;
       margin-bottom: 20px;
-      .colorInfoSpan {
+      .color-info-span {
         display: block;
       }
     }
   }
+}
 
-  .colorCheckWrap {
-    display: flex;
+.color-check-wrap {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  .color-check-img {
+    width: 33%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.color-picker {
+  h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .color-box {
+    display: grid;
+    grid-template-rows: repeat(2, 50px);
+    grid-template-columns: repeat(4, 50px);
+    gap: 10px;
+    align-content: center;
     justify-content: center;
     align-items: center;
-    height: 500px;
-    .colorCheckImg {
-      width: 33%;
+    justify-items: center;
+    .color {
+      width: 100%;
       height: 100%;
-      object-fit: cover;
+      border: 1px solid #000;
+    }
+    & + h4 {
+      margin-top: 15px;
     }
   }
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Review from './Components/Review/Review';
 import './UnderTap.scss';
 
 const UnderTap = () => {
@@ -20,11 +19,11 @@ const UnderTap = () => {
           </div>
         ))}
       </div>
-      <div className="tab-content">
+      <div className="tap-content">
         {currTabId === 0 ? (
           <img src={Tapdata.find(({ id }) => currTabId === id).src} />
         ) : (
-          <Review />
+          ''
         )}
       </div>
     </section>
@@ -37,11 +36,6 @@ const Tapdata = [
   {
     id: 0,
     title: '상품정보',
-    src: '/images/eyeProductDetail.jpg',
-  },
-  {
-    id: 1,
-    title: '리뷰',
     src: '/images/eyeProductDetail.jpg',
   },
 ];

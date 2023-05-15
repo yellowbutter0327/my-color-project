@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 1250px;
     margin: 0 auto;
     padding-bottom: 30px;
     .left-wrap {
@@ -42,7 +43,7 @@
           width: 95%;
           border: none;
           text-align: left;
-          font-size: 15px;
+          font-size: 20px;
           outline: none;
         }
         .search-icon {
@@ -69,21 +70,21 @@
         .login-wrap {
           margin-right: 10px;
           margin-left: 20px;
-          .login-span {
-            font-size: 15px;
-          }
+          font-size: 20px;
         }
       }
     }
   }
 
   .bottom-header {
+    margin: 0 auto;
     padding-top: 5px;
-
     border-top: 1px solid black;
 
     .nav-category-wrap {
       display: flex;
+      margin: 0 auto;
+      width: 1250px;
 
       .nav-category-list {
         padding: 5px;

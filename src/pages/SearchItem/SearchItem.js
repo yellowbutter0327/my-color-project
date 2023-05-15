@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 import './SearchItem.scss';
 
 const SearchItem = () => {
@@ -61,17 +61,25 @@ const SearchItem = () => {
 
   if (filteredResult.length === 0) {
     return (
-      <div>
-        No results found for "
-        {decodeURIComponent(location.search.replace('?q=', ''))}"
+      <div className="container">
+        <div className="search-none-message">
+          "{decodeURIComponent(location.search.replace('?q=', ''))}"에 대한
+          검색결과가 없습니다.
+        </div>
+        <button>
+          <Link to="/productlist" className="shop-link">
+            다시 쇼핑하러 가기
+          </Link>
+        </button>
       </div>
     );
   }
 
   return (
-    <div className="search-wrap">
-      <h1>
-        검색 결과: "{decodeURIComponent(location.search.replace('?q=', ''))}"
+    <div className="container">
+      <h1 className="search-item-title">
+        "{decodeURIComponent(location.search.replace('?q=', ''))}"으로 검색한
+        결과입니다.
       </h1>
       <div className="search-all-container">
         {filteredResult.map(item => (
@@ -95,18 +103,15 @@ const SearchItem = () => {
                 </div>
 
                 <div className="search-price-wrapper">
-                  <div className="discount-price-wrapper">
-                    <span className="discount-price">
-                      {item.price}
-                      <span>원</span>
-                    </span>
-                  </div>
-                  <div className="origin-price-wrapper">
-                    <span className="origin-price">
-                      {item.originPrice}
-                      <span>원</span>
-                    </span>
-                  </div>
+                  <span className="search-discount-price">
+                    {item.price}
+                    <span>원</span>
+                  </span>
+
+                  <span className="search-origin-price">
+                    {item.originPrice}
+                    <span>원</span>
+                  </span>
                 </div>
               </div>
             </div>

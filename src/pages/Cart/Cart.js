@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 import EmptyCart from './EmptyCart/EmptyCart';
 import CartList from './CartList/CartList';
 import CartTitle from './CartList/CartTitle';

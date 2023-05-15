@@ -62,8 +62,8 @@ const SearchItem = () => {
   if (filteredResult.length === 0) {
     return (
       <div>
-        No results found for "
-        {decodeURIComponent(location.search.replace('?q=', ''))}"
+        "{decodeURIComponent(location.search.replace('?q=', ''))}"에 대한
+        검색결과가 없습니다.
       </div>
     );
   }

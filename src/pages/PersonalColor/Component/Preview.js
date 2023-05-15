@@ -19,7 +19,7 @@ function Preview() {
     <div className="color-check-wrap">
       <div className="color-left-wrap">
         {seasonLeft.map(season => (
-          <div className="color-picker">
+          <div className="color-picker" key={season.colors}>
             <h4>{season.name}</h4>
             <div className="color-box">
               {season.colors.map(color => (
@@ -65,7 +65,7 @@ function Preview() {
 
       <div className="color-right-wrap">
         {seasonRight.map(season => (
-          <div className="color-picker">
+          <div className="color-picker" key={season.name}>
             <h4>{season.name}</h4>
             <div className="color-box">
               {season.colors.map(color => (

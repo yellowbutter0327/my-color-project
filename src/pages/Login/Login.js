@@ -42,7 +42,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login">
+    <div className="container">
       <h4 className="title-login">로그인</h4>
       <div className="login-form-container">
         <form className="login-form" onSubmit={handleSubmit} method="POST">

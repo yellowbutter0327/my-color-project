@@ -1,10 +1,24 @@
 .preview-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 30px;
+  width: 300px;
+  height: 300px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .file-wrap {
     margin: 0 auto;
     width: 50px;
     height: 50px;
     display: block;
     position: relative;
+    z-index: 1;
 
     .file-image-handler {
       position: absolute;
@@ -15,14 +29,22 @@
       background: url('../../../../src/assets/PersonalColor/click.png')
         no-repeat;
       background-size: 50px 50px;
-
-      &.no-image {
-        background: none;
-      }
     }
     .file-image {
       display: none;
       visibility: none;
     }
+    &.no-image {
+      margin: 0;
+      display: none;
+    }
+  }
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
   }
 }

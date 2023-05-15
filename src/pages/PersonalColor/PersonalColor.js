@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './PersonalColor.scss';
 import Preview from './Component/Preview';
-import image1 from 'assets/PersonalColor/image1.jpg';
-
 function PersonalColor() {
   return (
     <div className="container">
@@ -215,58 +213,7 @@ function PersonalColor() {
           </p>
         </div>
       </div>
-
-      <div className="color-check-wrap">
-        <div className="color-picker">
-          <h4>Spring</h4>
-          <div className="color-box">
-            <button className="color" style={{ background: '#f4cda4' }} />
-            <button className="color" style={{ background: '#f2b3a8' }} />
-            <button className="color" style={{ background: '#4c7f82' }} />
-            <button className="color" style={{ background: '#94d3ca' }} />
-            <button className="color" style={{ background: '#7b639f' }} />
-            <button className="color" style={{ background: '#005072' }} />
-            <button className="color" style={{ background: '#61aa51' }} />
-            <button className="color" style={{ background: '#9ec6f0' }} />
-          </div>
-          <h4>Summer</h4>
-          <div className="color-box">
-            <button className="color" style={{ background: '#eadbca' }} />
-            <button className="color" style={{ background: '#43393a' }} />
-            <button className="color" style={{ background: '#624f4c' }} />
-            <button className="color" style={{ background: '#43393a' }} />
-            <button className="color" style={{ background: '#e2a4b3' }} />
-            <button className="color" style={{ background: '#7273ad' }} />
-            <button className="color" style={{ background: '#487187' }} />
-            <button className="color" style={{ background: '#436659' }} />
-          </div>
-        </div>
-        <Preview />
-        <div className="color-picker">
-          <h4>Autumn</h4>
-          <div className="color-box">
-            <button className="color" style={{ background: '#c97947' }} />
-            <button className="color" style={{ background: '#caab55' }} />
-            <button className="color" style={{ background: '#6d6e2b' }} />
-            <button className="color" style={{ background: '#983636' }} />
-            <button className="color" style={{ background: '#e9dbc3' }} />
-            <button className="color" style={{ background: '#d7af84' }} />
-            <button className="color" style={{ background: '#1f2950' }} />
-            <button className="color" style={{ background: '#000000' }} />
-          </div>
-          <h4>Winter</h4>
-          <div className="color-box">
-            <button className="color" style={{ background: '#7a2840' }} />
-            <button className="color" style={{ background: '#215f4f' }} />
-            <button className="color" style={{ background: '#164669' }} />
-            <button className="color" style={{ background: '#443359' }} />
-            <button className="color" style={{ background: '#2a2a37' }} />
-            <button className="color" style={{ background: '#1a2b50' }} />
-            <button className="color" style={{ background: '#c3c1c2' }} />
-            <button className="color" style={{ background: '#fefefe' }} />
-          </div>
-        </div>
-      </div>
+      <Preview />
     </div>
   );
 }

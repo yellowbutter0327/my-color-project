@@ -1,5 +1,8 @@
 .color-wrap {
   background: #d6f3fe;
+  h1 {
+    margin-left: 10px;
+  }
   .info-wrap {
     padding: 20px 10px;
     line-height: 30px;
@@ -33,6 +36,7 @@
 }
 
 .color-picker {
+  margin-top: 6px;
   h4 {
     margin-bottom: 10px;
     font-size: 16px;

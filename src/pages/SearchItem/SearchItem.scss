@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 .search-all-container {
   display: flex;
   .search-list-container {
     width: 25%;
+=======
+.search-item-title {
+  margin-left: 20px;
+  font-size: 25px;
+}
+.search-all-container {
+  display: flex;
+
+  .search-list-container {
+>>>>>>> main
     .search-item-info {
       padding: 16px 0 0 16px;
       .search-image-wrapper {
@@ -17,6 +28,7 @@
           display: block;
           object-fit: cover;
           height: 250px;
+<<<<<<< HEAD
         }
       }
       .search-item-content-box {
@@ -34,11 +46,39 @@
 
           .search-price-wrapper {
             margin-top: 8px;
+=======
+        }
+      }
+      .search-item-content-box {
+        padding-top: 15px;
+
+        .search-item-wrapper {
+          .search-item-name {
+            height: 15px;
+            font-size: 15px;
+            color: rgb(62, 62, 62);
+            font-weight: bold;
+            text-align: left;
+            line-height: normal;
+          }
+        }
+        .search-price-wrapper {
+          margin-top: 8px;
+          color: rgb(62, 62, 62);
+          font-size: 16px;
+          text-align: left;
+          font-weight: bold;
+          line-height: 15px;
+          display: flex;
+
+          .search-discount-price {
+>>>>>>> main
             color: rgb(62, 62, 62);
             font-size: 16px;
             text-align: left;
             font-weight: bold;
             line-height: 15px;
+<<<<<<< HEAD
             display: flex;
 
             .discount-price-wrapper {
@@ -57,6 +97,17 @@
                 font-size: 14px;
               }
             }
+=======
+          }
+
+          .search-origin-price {
+            height: 15px;
+            margin-bottom: 5px;
+            margin-left: 7px;
+            color: rgb(178, 178, 178);
+            text-decoration: line-through;
+            font-size: 14px;
+>>>>>>> main
           }
         }
       }

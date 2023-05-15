@@ -70,8 +70,9 @@ const SearchItem = () => {
 
   return (
     <div className="container">
-      <h1>
-        검색 결과: "{decodeURIComponent(location.search.replace('?q=', ''))}"
+      <h1 className="search-item-title">
+        "{decodeURIComponent(location.search.replace('?q=', ''))}"로 검색한
+        결과입니다.
       </h1>
       <div className="search-all-container">
         {filteredResult.map(item => (
@@ -95,18 +96,15 @@ const SearchItem = () => {
                 </div>
 
                 <div className="search-price-wrapper">
-                  <div className="discount-price-wrapper">
-                    <span className="discount-price">
-                      {item.price}
-                      <span>원</span>
-                    </span>
-                  </div>
-                  <div className="origin-price-wrapper">
-                    <span className="origin-price">
-                      {item.originPrice}
-                      <span>원</span>
-                    </span>
-                  </div>
+                  <span className="search-discount-price">
+                    {item.price}
+                    <span>원</span>
+                  </span>
+
+                  <span className="search-origin-price">
+                    {item.originPrice}
+                    <span>원</span>
+                  </span>
                 </div>
               </div>
             </div>

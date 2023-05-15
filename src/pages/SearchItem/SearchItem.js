@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 import './SearchItem.scss';
 
 const SearchItem = () => {
@@ -61,9 +61,16 @@ const SearchItem = () => {
 
   if (filteredResult.length === 0) {
     return (
-      <div>
-        "{decodeURIComponent(location.search.replace('?q=', ''))}"에 대한
-        검색결과가 없습니다.
+      <div className="container">
+        <div className="search-none-message">
+          "{decodeURIComponent(location.search.replace('?q=', ''))}"에 대한
+          검색결과가 없습니다.
+        </div>
+        <button>
+          <Link to="/productlist" className="shop-link">
+            다시 쇼핑하러 가기
+          </Link>
+        </button>
       </div>
     );
   }
@@ -71,7 +78,7 @@ const SearchItem = () => {
   return (
     <div className="container">
       <h1 className="search-item-title">
-        "{decodeURIComponent(location.search.replace('?q=', ''))}"로 검색한
+        "{decodeURIComponent(location.search.replace('?q=', ''))}"으로 검색한
         결과입니다.
       </h1>
       <div className="search-all-container">

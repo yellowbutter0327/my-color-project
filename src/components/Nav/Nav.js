@@ -36,6 +36,7 @@ const Nav = () => {
   const handleSearch = () => {
     const query = new URLSearchParams({ q: searchInput }).toString();
     navigate(`/search?${query}`);
+    setSearchInput('');
     console.log(query);
   };
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Preview.scss';
 function Preview() {
   const [image, setImage] = useState('');
+  const [selectedColor, setSelectedColor] = useState('');
 
   function ImageChangeEvent(event) {
     const selectedFile = event.target.files[0];
@@ -22,7 +23,13 @@ function Preview() {
             <h4>{season.name}</h4>
             <div className="color-box">
               {season.colors.map(color => (
-                <button className="color" style={{ background: color }} />
+                <button
+                  className="color"
+                  style={{ background: color }}
+                  onClick={() => {
+                    setSelectedColor(color);
+                  }}
+                />
               ))}
             </div>
           </div>
@@ -42,9 +49,18 @@ function Preview() {
           />
           <div className="file-image-handler" />
         </label>
-        {!image && <p className="preview-message">사진을 넣어주세요</p>}
-        {image && <img src={image} alt="Selected file" className="uploadImg" />}
-        <div class="bg" />
+        {!image && (
+          <p className="preview-message">
+            민낯 얼굴 사진을 넣어주세요.
+            <br />
+            색상 버튼을 클릭했을 때 화사해지는 것이 <br /> 자신의 퍼스널 컬러에
+            가깝습니다.
+          </p>
+        )}
+        {image && (
+          <img src={image} alt="Selected file" className="upload-img" />
+        )}
+        <div className="bg" style={{ background: selectedColor }} />
       </div>
 
       <div className="color-right-wrap">
@@ -53,7 +69,13 @@ function Preview() {
             <h4>{season.name}</h4>
             <div className="color-box">
               {season.colors.map(color => (
-                <button className="color" style={{ background: color }} />
+                <button
+                  className="color"
+                  style={{ background: color }}
+                  onClick={() => {
+                    setSelectedColor(color);
+                  }}
+                />
               ))}
             </div>
           </div>

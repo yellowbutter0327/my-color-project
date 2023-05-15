@@ -1,63 +1,60 @@
-.search-wrap {
-  padding-top: 130px;
-  .search-all-container {
-    display: flex;
-    .search-list-container {
-      width: 25%;
-      .search-item-info {
-        padding: 16px 0 0 16px;
-        .search-image-wrapper {
-          width: 90%;
+.search-all-container {
+  display: flex;
+  .search-list-container {
+    width: 25%;
+    .search-item-info {
+      padding: 16px 0 0 16px;
+      .search-image-wrapper {
+        width: 90%;
+        height: 250px;
+        position: relative;
+        border-radius: 10px;
+
+        .search-item-img {
+          border-radius: 15px;
+          box-sizing: border-box;
+          border: none;
+          display: block;
+          object-fit: cover;
           height: 250px;
-          position: relative;
-          border-radius: 10px;
-
-          .search-item-img {
-            border-radius: 15px;
-            box-sizing: border-box;
-            border: none;
-            display: block;
-            object-fit: cover;
-            height: 250px;
-          }
         }
-        .search-item-content-box {
-          padding-top: 15px;
+      }
+      .search-item-content-box {
+        padding-top: 15px;
 
-          .search-item-wrapper {
-            .search-item-name {
-              height: 15px;
-              font-size: 15px;
-              color: rgb(62, 62, 62);
-              font-weight: bold;
-              text-align: left;
-              line-height: normal;
+        .search-item-wrapper {
+          .search-item-name {
+            height: 15px;
+            font-size: 15px;
+            color: rgb(62, 62, 62);
+            font-weight: bold;
+            text-align: left;
+            line-height: normal;
+          }
+
+          .search-price-wrapper {
+            margin-top: 8px;
+            color: rgb(62, 62, 62);
+            font-size: 16px;
+            text-align: left;
+            font-weight: bold;
+            line-height: 15px;
+            display: flex;
+
+            .discount-price-wrapper {
+              .discount-price {
+                margin-left: 8px;
+              }
             }
 
-            .search-price-wrapper {
-              margin-top: 8px;
-              color: rgb(62, 62, 62);
-              font-size: 16px;
-              text-align: left;
-              font-weight: bold;
-              line-height: 15px;
-              display: flex;
-
-              .discount-price-wrapper {
-                .discount-price {
-                  margin-left: 8px;
-                }
-              }
-
-              .origin-price-wrapper {
-                .origin-price {
-                  height: 15px;
-                  margin-bottom: 5px;
-                  margin-right: 7px;
-                  color: rgb(178, 178, 178);
-                  text-decoration: line-through;
-                  font-size: 14px;
-                }
+            .origin-price-wrapper {
+              .origin-price {
+                height: 15px;
+                margin-bottom: 5px;
+                margin-right: 7px;
+                color: rgb(178, 178, 178);
+                text-decoration: line-through;
+                font-size: 14px;
               }
             }
           }

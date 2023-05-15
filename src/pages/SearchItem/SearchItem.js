@@ -69,7 +69,7 @@ const SearchItem = () => {
   }
 
   return (
-    <div className="search-wrap">
+    <div className="container">
       <h1>
         검색 결과: "{decodeURIComponent(location.search.replace('?q=', ''))}"
       </h1>

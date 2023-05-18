@@ -15,9 +15,6 @@ function Register() {
   const [pwSameValid, setPwSameValid] = useState(false);
   const [allow, setAllow] = useState(false);
   const navigate = useNavigate();
-  const [error, setError] = useState('');
-
-  const [errorMsg, setErrorMsg] = useState('　');
 
   useEffect(() => {
     if (nickValid && emailValid && pwValid && pwSameValid) {
@@ -66,35 +63,23 @@ function Register() {
     }
   };
 
-  // const handleSubmit = e => {
-  //   e.preventDefault();
-  //   if (!allow) {
-  //     alert('회원가입에 실패하였습니다.');
-  //     return;
-  //   } else {
-  // alert(`${nickname}님 회원가입이 완료되었습니다.`);
-  //     navigate('/login');
-  //   }
-  // };
-
   const handleSubmit = e => {
     e.preventDefault();
     if (!allow) {
       alert('회원가입에 실패하였습니다.');
       return;
-    } else if (allow) {
-      createUserWithEmailAndPassword(auth, email, pw)
-        .then(userCredential => {
-          console.log(userCredential);
-          alert('회원가입이 완료되었습니다.');
-          navigate('/login');
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    } else {
-      alert('이메일과 비밀번호를 입력해주세요.');
     }
+
+    createUserWithEmailAndPassword(auth, email, pw)
+      .then(userCredential => {
+        console.log(userCredential);
+        alert('회원가입이 완료되었습니다.');
+        navigate('/login'); // 회원가입 후 홈 페이지로 이동
+      })
+      .catch(error => {
+        console.error('Error creating user:', error);
+        alert('회원가입에 실패하였습니다.');
+      });
   };
 
   return (
@@ -171,9 +156,15 @@ function Register() {
           </div>
         </div>
       </form>
-      <button className="register-button" type="button" onClick={handleSubmit}>
-        가입하기
-      </button>
+      <div className="register-button-wrap">
+        <button
+          className="register-button"
+          type="button"
+          onClick={handleSubmit}
+        >
+          가입하기
+        </button>
+      </div>
     </div>
   );
 }

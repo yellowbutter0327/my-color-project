@@ -11,33 +11,37 @@ const Nav = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   useEffect(() => {
-    onAuthStateChanged(auth, userAuth => {
+    const unsubscribe = onAuthStateChanged(auth, userAuth => {
       if (userAuth) {
+        console.log('User is logged in:', userAuth.uid);
         dispatch(
           login({
             userId: userAuth.uid,
           })
         );
       } else {
+        console.log('User is logged out');
         dispatch(logout());
       }
     });
+    return () => {
+      unsubscribe();
+    };
   }, []);
 
   const handleLogout = () => {
     dispatch(logout());
+    auth.signOut();
     navigate('/');
   };
 
   // 검색 기능
-  const [itemList, setItemList] = useState();
   const [searchInput, setSearchInput] = useState('');
 
   const handleSearch = () => {
     const query = new URLSearchParams({ q: searchInput }).toString();
     navigate(`/search?${query}`);
     setSearchInput('');
-    console.log(query);
   };
 
   return (
@@ -46,7 +50,11 @@ const Nav = () => {
         <div className="left-wrap">
           <div className="logo">
             <Link to="/">
-              <img className="main-logo" src="/images/main-logo.jpeg" />
+              <img
+                className="main-logo"
+                src="/images/main-logo.jpeg"
+                alt="메인 로고 이미지"
+              />
             </Link>
           </div>
           <div className="search-wrap">

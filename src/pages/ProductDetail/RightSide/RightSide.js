@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addItemToCart } from '../../../store/Feature/cartReducer';
+import { selectIsLoggedIn } from '../../../store/Feature/userSlice';
 import './RightSide.scss';
 
-const RightSide = ({ productData, match }) => {
+const RightSide = ({ productData }) => {
   const [quantity, setQuantity] = useState(0);
   const dispatch = useDispatch();
-  const isLoggedIn = useSelector(state => state.user.isLoggedIn);
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   const uid = useSelector(state => state.user.userId);
+  const navigate = useNavigate();
 
   const handleQuantityIncrease = () => {
     setQuantity(quantity + 1);
@@ -21,8 +23,14 @@ const RightSide = ({ productData, match }) => {
   };
 
   const handleAddToCart = () => {
-    const cartItem = { ...productData, quantity, userId: uid }; // 장바구니에 추가할 상품 데이터에 userId 추가
-    dispatch(addItemToCart(cartItem)); // addToCart action dispatch
+    if (!isLoggedIn) {
+      alert('로그인이 필요한 서비스입니다.');
+      navigate('/login');
+    } else {
+      const cartItem = { ...productData, quantity, userId: uid };
+      dispatch(addItemToCart(cartItem));
+      navigate('/cart');
+    }
   };
 
   return (
@@ -53,16 +61,13 @@ const RightSide = ({ productData, match }) => {
         </div>
 
         <div className="purchase-icon-wrap">
-          <Link to="/cart">
-            <button className="purchase-button" onClick={handleAddToCart}>
-              장바구니
-            </button>
-          </Link>
-          <Link to="/cart">
-            <button className="purchase-button" onClick={handleAddToCart}>
-              구매하기
-            </button>
-          </Link>
+          <button className="purchase-button" onClick={handleAddToCart}>
+            장바구니
+          </button>
+
+          <button className="purchase-button" onClick={handleAddToCart}>
+            구매하기
+          </button>
         </div>
       </div>
     </div>

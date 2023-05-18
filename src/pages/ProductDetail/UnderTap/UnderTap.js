@@ -21,7 +21,10 @@ const UnderTap = () => {
       </div>
       <div className="tap-content">
         {currTabId === 0 ? (
-          <img src={Tapdata.find(({ id }) => currTabId === id).src} />
+          <img
+            src={Tapdata.find(({ id }) => currTabId === id).src}
+            alt="상품 상세 탭별 이미지"
+          />
         ) : (
           ''
         )}
@@ -36,6 +39,6 @@ const Tapdata = [
   {
     id: 0,
     title: '상품정보',
-    src: '/images/eyeProductDetail.jpg',
+    src: '/images/product-under-detail.jpg',
   },
 ];

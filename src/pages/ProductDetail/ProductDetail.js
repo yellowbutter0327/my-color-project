@@ -5,7 +5,6 @@ import RightSide from './RightSide/RightSide';
 import './ProductDetail.scss';
 import UnderTap from './UnderTap/UnderTap';
 import { useDispatch } from 'react-redux';
-import { addItemToCart } from '../../store/Feature/cartReducer.js';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -36,19 +35,11 @@ const ProductDetail = () => {
         console.log('Error:', error);
       });
   }, []);
-
-  const handleAddToCart = () => {
-    dispatch(addItemToCart(productData));
-  };
-
   return (
     <div className="container">
       <div className="product-top-wrap">
         <LeftSide productData={productData} />
-        <RightSide
-          productData={productData}
-          handleAddToCart={handleAddToCart}
-        />
+        <RightSide productData={productData} />
       </div>
       <div className="product-under-wrap">
         <UnderTap />

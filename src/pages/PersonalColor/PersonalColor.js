@@ -5,7 +5,7 @@ function PersonalColor() {
   return (
     <div className="container">
       <div className="color-wrap">
-        <h1 className="search-title">나의 퍼스널 키워드 찾기🔍</h1>
+        <h1 className="search-title">나의 퍼스널 컬러 찾기 🔍</h1>
         <div className="info-wrap">
           <h2 className="color-title">봄웜톤 특징 </h2>
           <p className="color-info">

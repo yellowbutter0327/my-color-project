@@ -19,20 +19,15 @@ const Footer = () => {
         <div className="linkList">
           <div className="service">SERVICE</div>
           {localStorage.getItem('TOKEN') ? (
-            <>
-              <Link className="serviceLink" to="/productregister">
-                판매하기
-              </Link>
-              <Link
-                className="serviceLink"
-                onClick={() => {
-                  localStorage.removeItem('TOKEN');
-                }}
-                to="/login"
-              >
-                로그아웃
-              </Link>
-            </>
+            <Link
+              className="serviceLink"
+              onClick={() => {
+                localStorage.removeItem('TOKEN');
+              }}
+              to="/login"
+            >
+              로그아웃
+            </Link>
           ) : (
             <>
               <button

@@ -1,9 +1,20 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import './CartList.scss';
+import { removeItemFromCart } from '../../../store/Feature/cartReducer';
 
 const CartList = ({ cart }) => {
-  const [quantity, setQuantity] = useState(cart.map(item => item.quantity));
+  const dispatch = useDispatch();
+  const [quantity, setQuantity] = useState([]);
+
+  useEffect(() => {
+    setQuantity(cart.map(item => item.quantity));
+  }, [cart]);
+
+  const handleItemRemove = itemId => {
+    dispatch(removeItemFromCart(itemId));
+  };
 
   const handleQuantityIncrease = index => {
     const newQuantity = [...quantity];
@@ -19,7 +30,10 @@ const CartList = ({ cart }) => {
     }
   };
 
-  const totalPrice = cart.reduce((acc, item) => acc + parseInt(item.price), 0);
+  const totalPrice = cart.reduce(
+    (acc, item, index) => acc + parseInt(item.price) * quantity[index],
+    0
+  );
 
   return (
     <>
@@ -35,7 +49,11 @@ const CartList = ({ cart }) => {
         {cart.map((item, index) => (
           <div className="cart-list-wrap" key={item.id}>
             <div className="cart-item-productinfo-wrap">
-              <img className="cart-item-img" src={item.src} />
+              <img
+                className="cart-item-img"
+                src={item.src}
+                alt="장바구니 사진 이미지"
+              />
               <span className="cart-item-text"> {item.title}</span>{' '}
             </div>
             <div className="cart-item-info-wrap">{item.price} </div>{' '}
@@ -55,7 +73,12 @@ const CartList = ({ cart }) => {
               </button>
             </div>
             <div className="cart-item-info-wrap">
-              <button className="delete-button">삭제하기</button>
+              <button
+                className="delete-button"
+                onClick={() => handleItemRemove(item.id)}
+              >
+                삭제하기
+              </button>
             </div>
           </div>
         ))}

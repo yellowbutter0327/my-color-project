@@ -18,6 +18,7 @@ const Login = () => {
     userId: '',
     userPassword: '',
   });
+
   const { userId, userPassword } = userInfo;
 
   const getUserInfo = e => {
@@ -38,6 +39,7 @@ const Login = () => {
       })
       .catch(error => {
         console.log(error);
+        alert('없는 계정이거나 아이디, 비밀번호가 틀립니다.');
       });
   };
 
@@ -53,6 +55,7 @@ const Login = () => {
               name="userId"
               type="text"
               placeholder="아이디"
+              autocomplete="off"
             />
           </div>
 
@@ -78,19 +81,23 @@ const Login = () => {
 
         <div className="social-button">
           <button className="login-button-kakao" type="submit">
-            <img className="social-icon" src={iconKakao} />
+            <img
+              className="social-icon"
+              src={iconKakao}
+              alt="카카오 소셜로그인 로고"
+            />
             카카오로 1초만에 시작하기
           </button>
         </div>
 
         <div className="signup-and-find">
-          <Link to="/register/terms" className="link">
+          <Link to="/register/terms" className="login-bottom-link">
             회원가입
           </Link>
-          <Link to="/login" className="link">
+          <Link to="/login" className="login-bottom-link">
             아이디 찾기
           </Link>
-          <Link to="/login" className="link">
+          <Link to="/login" className="login-bottom-link">
             비밀번호 찾기
           </Link>
         </div>

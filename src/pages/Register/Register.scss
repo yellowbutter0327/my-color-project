@@ -31,11 +31,14 @@
   }
 }
 
-.register-button {
-  margin-top: 50px;
-  font-size: 20px;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 8px;
-  background-color: skyblue;
+.register-button-wrap {
+  text-align: center;
+  .register-button {
+    margin-top: 50px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: skyblue;
+  }
 }

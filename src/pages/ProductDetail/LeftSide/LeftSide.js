@@ -24,7 +24,7 @@ const LeftSide = ({ productData }) => {
         <img src={productData.src} className="slide-image" alt="이미지1" />
       </div>
       <div>
-        <img src={productData.src} className="slide-image" alt="이미지2" />
+        <img src={productData.src2} className="slide-image" alt="이미지2" />
       </div>
     </Slider>
   );

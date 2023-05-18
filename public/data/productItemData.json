@@ -7,7 +7,8 @@
     "originPrice": "10000",
     "price": "5000",
     "date": "2023-04-01",
-    "src": "../images/product1.jpg"
+    "src": "../images/product1.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 1,
@@ -17,7 +18,8 @@
     "originPrice": "54000",
     "price": "49000",
     "date": "2022-04-01",
-    "src": "../images/product2.jpg"
+    "src": "../images/product2.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 2,
@@ -27,7 +29,8 @@
     "originPrice": "19850",
     "price": "9000",
     "date": "2022-06-03",
-    "src": "../images/product3.jpg"
+    "src": "../images/product3.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 3,
@@ -37,7 +40,8 @@
     "originPrice": "78000",
     "price": "60000",
     "date": "2022-07-01",
-    "src": "../images/product4.jpg"
+    "src": "../images/product4.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 4,
@@ -47,7 +51,8 @@
     "originPrice": "18900",
     "price": "16000",
     "date": "2020-06-04",
-    "src": "../images/product5.jpg"
+    "src": "../images/product5.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 5,
@@ -57,7 +62,8 @@
     "originPrice": "56000",
     "price": "42000",
     "date": "2023-03-03",
-    "src": "../images/product6.jpg"
+    "src": "../images/product6.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 6,
@@ -67,7 +73,8 @@
     "originPrice": "24000",
     "price": "11000",
     "date": "2020-06-06",
-    "src": "../images/product7.jpg"
+    "src": "../images/product7.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 7,
@@ -77,7 +84,8 @@
     "originPrice": "18000",
     "price": "17000",
     "date": "2020-06-07",
-    "src": "../images/product8.jpg"
+    "src": "../images/product8.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 8,
@@ -87,7 +95,8 @@
     "originPrice": "18900",
     "price": "6000",
     "date": "2020-06-08",
-    "src": "../images/product9.jpg"
+    "src": "../images/product9.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 9,
@@ -97,7 +106,8 @@
     "originPrice": "50000",
     "price": "49000",
     "date": "2020-06-09",
-    "src": "../images/product10.jpg"
+    "src": "../images/product10.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 10,
@@ -107,7 +117,8 @@
     "originPrice": "100000",
     "price": "99000",
     "date": "2020-06-10",
-    "src": "../images/product11.jpg"
+    "src": "../images/product11.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 11,
@@ -117,7 +128,8 @@
     "originPrice": "28000",
     "price": "16100",
     "date": "2020-06-11",
-    "src": "../images/product12.jpg"
+    "src": "../images/product12.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 12,
@@ -127,7 +139,8 @@
     "originPrice": "15600",
     "price": "15000",
     "date": "2020-06-12",
-    "src": "../images/product13.jpg"
+    "src": "../images/product13.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 13,
@@ -137,7 +150,8 @@
     "originPrice": "37000",
     "price": "24000",
     "date": "2020-06-13",
-    "src": "../images/product14.jpg"
+    "src": "../images/product14.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 14,
@@ -147,7 +161,8 @@
     "originPrice": "40000",
     "price": "29000",
     "date": "2020-06-14",
-    "src": "../images/product15.jpg"
+    "src": "../images/product15.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 15,
@@ -157,7 +172,8 @@
     "originPrice": "37000",
     "price": "28000",
     "date": "2020-06-15",
-    "src": "../images/product16.jpg"
+    "src": "../images/product16.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 16,
@@ -167,7 +183,8 @@
     "originPrice": "50000",
     "price": "39000",
     "date": "2020-06-16",
-    "src": "../images/product17.jpg"
+    "src": "../images/product17.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 17,
@@ -177,7 +194,8 @@
     "originPrice": "26000",
     "price": "10000",
     "date": "2020-06-17",
-    "src": "../images/product18.jpg"
+    "src": "../images/product18.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 18,
@@ -187,7 +205,8 @@
     "originPrice": "25000",
     "price": "15000",
     "date": "2020-06-18",
-    "src": "../images/product19.jpg"
+    "src": "../images/product19.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 19,
@@ -197,7 +216,8 @@
     "originPrice": "30000",
     "price": "11000",
     "date": "2020-06-19",
-    "src": "../images/product20.jpg"
+    "src": "../images/product20.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 20,
@@ -207,7 +227,8 @@
     "originPrice": "35000",
     "price": "26000",
     "date": "2020-06-20",
-    "src": "../images/product21.jpg"
+    "src": "../images/product21.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 21,
@@ -217,7 +238,8 @@
     "originPrice": "34000",
     "price": "17000",
     "date": "2020-06-21",
-    "src": "../images/product22.jpg"
+    "src": "../images/product22.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 22,
@@ -227,7 +249,8 @@
     "originPrice": "80000",
     "price": "50000",
     "date": "2020-06-22",
-    "src": "../images/product23.jpg"
+    "src": "../images/product23.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 23,
@@ -237,7 +260,8 @@
     "originPrice": "25000",
     "price": "20000",
     "date": "2020-06-23",
-    "src": "../images/product24.jpg"
+    "src": "../images/product24.jpg",
+    "src2": "../images/product-detail2.jpg"
   },
   {
     "id": 24,
@@ -247,6 +271,7 @@
     "originPrice": "10000",
     "price": "9000",
     "date": "2020-06-24",
-    "src": "../images/product25.jpg"
+    "src": "../images/product25.jpg",
+    "src2": "../images/product-detail2.jpg"
   }
 ]

@@ -114,8 +114,8 @@ REDUX
 
 
 
-
-회고록 : 
+### 회고록
+회고록 : <a href="https://velog.io/@yellowbutter0327/mycolor%ED%9A%8C%EA%B3%A0%EB%A1%9D">myColor 회고록</a>
 
 
 

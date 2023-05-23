@@ -33,10 +33,9 @@ REDUX
 - firebase를 사용하여 회원가입 기능 구현
 - 유효성 검사
 
-![CleanShot 2023-05-17 at 18 10 55](https://github.com/yellowbutter0327/my-color-project/assets/103365467/cd307256-2b7d-4399-a92d-d647b031aa4c)
-![CleanShot 2023-05-17 at 18 15 50](https://github.com/yellowbutter0327/my-color-project/assets/103365467/06a8ecf8-205f-439a-b3c0-58057c6d4763)
+![CleanShot 2023-05-24 at 01 44 54](https://github.com/yellowbutter0327/my-color-project/assets/103365467/bbe45ca6-8bf2-4d51-b266-3943d6ae695f)
+![CleanShot 2023-05-24 at 01 47 19](https://github.com/yellowbutter0327/my-color-project/assets/103365467/67125315-8eea-41be-8ea4-177d9dc50789)
 ![CleanShot 2023-05-17 at 20 52 23](https://github.com/yellowbutter0327/my-color-project/assets/103365467/58c03543-8efa-4393-beb5-7e08a9abb124)
-
 
 #### 로그인
 

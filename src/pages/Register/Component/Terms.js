@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Terms.scss';
-import TermsToggle from '/Users/jo-eunhye/Desktop/my-color-project/my-color-project/src/pages/Register/Component/TermsToggle.js';
+import TermsToggle from './TermsToggle.js';
 
 function Terms() {
   const [allCheck, setAllCheck] = useState(false);

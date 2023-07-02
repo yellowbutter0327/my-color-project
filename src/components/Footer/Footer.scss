@@ -6,7 +6,7 @@
   background-color: #fff;
   z-index: 120;
 
-  .wrapLink {
+  .wrap-link {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -14,7 +14,7 @@
     top: 50px;
     left: 0;
   }
-  .linkList {
+  .link-list {
     flex-direction: column;
     margin-right: 100px;
     align-items: center;
@@ -24,7 +24,7 @@
       border-bottom: 2px solid #e4e4e4;
     }
 
-    .categoryLink {
+    .category-link {
       text-decoration: none;
       display: block;
       margin-top: 20px;
@@ -40,17 +40,8 @@
       border-bottom: 2px solid #e4e4e4;
     }
 
-    .serviceLink {
+    .service-link {
       text-decoration: none;
-      display: block;
-      margin-top: 20px;
-      color: #000;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    .needPermissionButton {
       display: block;
       margin-top: 20px;
       color: #000;
@@ -60,7 +51,7 @@
     }
   }
 
-  .wrapProfile {
+  .wrap-profile {
     position: absolute;
     width: 40%;
     top: 50px;
@@ -78,11 +69,11 @@
       flex-direction: column;
       padding-top: 20px;
 
-      .profileGithub {
+      .profile-github {
         display: block;
       }
     }
-    .officeInfo {
+    .office-info {
       width: 300px;
       margin-top: 20px;
       padding-top: 20px;

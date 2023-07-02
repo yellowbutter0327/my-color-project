@@ -4,12 +4,10 @@ import LeftSide from './LeftSide/LeftSide';
 import RightSide from './RightSide/RightSide';
 import './ProductDetail.scss';
 import UnderTap from './UnderTap/UnderTap';
-import { useDispatch } from 'react-redux';
 
 const ProductDetail = () => {
   const { id } = useParams();
   const [productData, setProductData] = useState({});
-  const dispatch = useDispatch();
 
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/data/productItemData.json`, {

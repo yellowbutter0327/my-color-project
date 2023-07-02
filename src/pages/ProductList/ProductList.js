@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './ProductList.scss';
 import ProductItem from './Component/Body/ProductItem';
 import ProductSearch from './Component/Body/ProductSearch';
-import Dropdown from './Component/Head/Dropdown';
 import ProductMenu from './Component/Head/ProductMenu';
 
 function ProductList() {

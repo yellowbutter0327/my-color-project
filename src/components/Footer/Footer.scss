@@ -1,85 +1,83 @@
 .footer {
   position: relative;
   width: 100%;
-  padding: 50px 0;
+  height: 300px;
   border-top: 3px solid #e4e4e4;
   background-color: #fff;
   z-index: 120;
 
-  .footer-inner {
+  .wrap-link {
     display: flex;
-    justify-content: space-between;
-    width: 1250px;
-    margin: 0 auto;
-    .wrap-link {
-      display: flex;
-      justify-content: center;
-      top: 50px;
-      left: 0;
-      .link-list {
-        flex-direction: column;
-        margin-right: 100px;
-        align-items: center;
-        .category {
-          font-size: 18px;
-          font-weight: 600;
-          border-bottom: 2px solid #e4e4e4;
-        }
+    justify-content: center;
+    position: absolute;
+    width: 50%;
+    top: 50px;
+    left: 0;
+  }
+  .link-list {
+    flex-direction: column;
+    margin-right: 100px;
+    align-items: center;
+    .category {
+      font-size: 18px;
+      font-weight: 600;
+      border-bottom: 2px solid #e4e4e4;
+    }
 
-        .category-link {
-          text-decoration: none;
-          display: block;
-          margin-top: 20px;
-          color: #000;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-
-        .service {
-          font-size: 18px;
-          font-weight: 600;
-          border-bottom: 2px solid #e4e4e4;
-        }
-
-        .service-link {
-          text-decoration: none;
-          display: block;
-          margin-top: 20px;
-          color: #000;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
+    .category-link {
+      text-decoration: none;
+      display: block;
+      margin-top: 20px;
+      color: #000;
+      &:hover {
+        text-decoration: underline;
       }
     }
 
-    .wrap-profile {
-      top: 50px;
-      right: 0;
-      padding-bottom: 30px;
-      .developer {
-        display: inline-block;
-        font-size: 18px;
-        font-weight: 600;
-        border-bottom: 2px solid #e4e4e4;
-      }
-      .profile {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding-top: 20px;
+    .service {
+      font-size: 18px;
+      font-weight: 600;
+      border-bottom: 2px solid #e4e4e4;
+    }
 
-        .profile-github {
-          display: block;
-        }
+    .service-link {
+      text-decoration: none;
+      display: block;
+      margin-top: 20px;
+      color: #000;
+      &:hover {
+        text-decoration: underline;
       }
-      .office-info {
-        width: 300px;
-        margin-top: 20px;
-        padding-top: 20px;
-        border-top: 1px solid #e4e4e4;
+    }
+  }
+
+  .wrap-profile {
+    position: absolute;
+    width: 40%;
+    top: 50px;
+    right: 0;
+    padding-bottom: 30px;
+    .developer {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 600;
+      border-bottom: 2px solid #e4e4e4;
+    }
+    .profile {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 20px;
+
+      .profile-github {
+        display: block;
       }
+    }
+    .office-info {
+      width: 300px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #e4e4e4;
     }
   }
 }

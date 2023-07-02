@@ -1,14 +1,3 @@
-.search-none-message {
-  font-size: 25px;
-  margin-bottom: 15px;
-}
-.shop-link {
-  font-size: 20px;
-  background-color: lightgrey;
-  padding: 3px;
-  border-radius: 3px;
-}
-
 .search-item-title {
   margin-left: 20px;
   font-size: 25px;
@@ -17,10 +6,10 @@
   display: flex;
 
   .search-list-container {
-    width: 25%;
     .search-item-info {
       padding: 16px 0 0 16px;
       .search-image-wrapper {
+        width: 90%;
         height: 250px;
         position: relative;
         border-radius: 10px;
@@ -36,6 +25,7 @@
       }
       .search-item-content-box {
         padding-top: 15px;
+
         .search-item-wrapper {
           .search-item-name {
             height: 15px;
